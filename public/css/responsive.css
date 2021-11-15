@@ -4,7 +4,7 @@
 *
 * -----------------------------------------------------------------------------
 *
-* Template : Soccer HTML5 Responsive Template 
+* Template : Soccer HTML5 Responsive Template
 * Author : rs-theme
 * Author URI : http://www.rstheme.com/
 *
@@ -29,7 +29,7 @@
         bottom: -9%;
     }
     .slider-main .dsc .slider-image img{
-        max-width: 70% !important; 
+        max-width: 70% !important;
     }
     .slider-section2 .innner-slider .inner-dsc {
         margin-bottom: 26%;
@@ -37,7 +37,7 @@
     .slider-section2 .innner-slider .layer-big-image{
         max-width: 580px;
     }
-   
+
 }
 /* Midea Devices Max 1300px */
 @media only screen and (max-width: 1300px) {
@@ -45,8 +45,8 @@
         margin-top: 15%;
     }
     .slider-main .dsc .slider-image img{
-        max-width: 60% !important; 
-    } 
+        max-width: 60% !important;
+    }
     .full-section-banner::after, .full-section-banner::before {
         bottom: -6%;
     }
@@ -57,13 +57,13 @@
         padding: 28px 10px;
     }
     .banner-sections .banner-text-area .banner-innner h1,
-    .slider-main .dsc h2, 
+    .slider-main .dsc h2,
     .slider-section2 .dsc h2,
-    .slider-main .dsc h1, 
+    .slider-main .dsc h1,
     .slider-section2 .dsc h1{
         font-size: 45px;
     }
-    .slider-main .dsc h1, 
+    .slider-main .dsc h1,
     .slider-main .dsc h2{
         line-height: 58px;
     }
@@ -158,13 +158,13 @@
     .banner-sections .banner-text-area{
         top: 60%;
     }
-    .latest-news .small-news .news-text h3, 
+    .latest-news .small-news .news-text h3,
     .latest-news2 .small-news .news-text h3{
-         line-height: 14px; 
+         line-height: 14px;
     }
-    .latest-news .small-news .news-text h3 a, 
+    .latest-news .small-news .news-text h3 a,
     .latest-news2 .small-news .news-text h3 a{
-         font-size: 13px; 
+         font-size: 13px;
     }
     .match-list .match-table tr td.medium-font {
         font-size: 12px;
@@ -172,7 +172,7 @@
     .match-list .match-table tr td.big-font {
         font-size: 20px;
     }
-    .point-list table.point-table th, 
+    .point-list table.point-table th,
     .point-list table.point-table td {
         padding: 7px 12px;
         font-size: 14px;
@@ -180,8 +180,8 @@
     .today-match-teams .today-results-table tr td {
         padding: 7px 12px;
     }
-    .today-match-teams .today-score .today-match-team, 
-    .today-match-teams .today-score .today-final-score, 
+    .today-match-teams .today-score .today-match-team,
+    .today-match-teams .today-score .today-final-score,
     .today-match-teams .today-score .today-match-team {
         display: block;
         margin: 0 auto;
@@ -217,9 +217,9 @@
 
 /* Medium devices max 991px and min 768px */
 @media only screen and (min-width:768px) and (max-width: 991px) {
-    .upcoming-section span, 
-    .upcoming-section2 span, 
-    .upcoming-section3 span, 
+    .upcoming-section span,
+    .upcoming-section2 span,
+    .upcoming-section3 span,
     .upcoming-section4 span{
         font-size: 14px;
     }
@@ -259,6 +259,9 @@
     .pt-100{
         padding-top: 80px;
     }
+    .pt-150 {
+        padding-top: 100px;
+    }
     .pb-100,
     .our-products-section.our-products-page{
         padding-bottom: 80px;
@@ -273,7 +276,7 @@
     .clicent-logo-section{
         padding-bottom: 30px;
     }
-    
+
     .upcoming-section,
     .upcoming-section2{
         padding: 72px 0 77px;
@@ -348,10 +351,10 @@
     .slider-section2 .innner-slider .inner-dsc {
         margin-bottom: 30%;
     }
-    
-    .header-middle-area .search a, 
+
+    .header-middle-area .search a,
     .fullwidth-section2 .header-middle-area .rs-menu > ul > li > a,
-    .header-middle-area .search .search-btn, 
+    .header-middle-area .search .search-btn,
     .header-middle-area .rs-menu > ul > li > a{
         color: #ffffff !important;
     }
@@ -366,11 +369,11 @@
     .header-middle-area .rs-menu > ul > li > a:hover,
     .header-middle-area .rs-menu > ul > li.active > a,
     .fullwidth-section2 .header-middle-area .rs-menu > ul > li.active > a{
-        color: #fbc02d !important;
+        color: #0c4c91 !important;
     }
     .header-middle-area4,
     .header-middle-area{
-        background: #111 !important;
+        background: white !important;
     }
     .rs-menu{
 		visibility: visible;
@@ -468,18 +471,18 @@
     .footer-section .footer-top{
         padding: 80px 0;
     }
-    .slider-main .dsc h1, 
+    .slider-main .dsc h1,
     .slider-main .dsc h2 {
         line-height: 44px;
     }
-    .upcoming-section h2, 
-    .upcoming-section2 h2, 
-    .upcoming-section3 h2, 
+    .upcoming-section h2,
+    .upcoming-section2 h2,
+    .upcoming-section3 h2,
     .upcoming-section4 h2,
-    .banner-sections .banner-text-area .banner-innner h1, 
-    .slider-main .dsc h2, 
-    .slider-section2 .dsc h2, 
-    .slider-main .dsc h1, 
+    .banner-sections .banner-text-area .banner-innner h1,
+    .slider-main .dsc h2,
+    .slider-section2 .dsc h2,
+    .slider-main .dsc h1,
     .slider-section2 .dsc h1 {
         font-size: 35px;
     }
@@ -514,14 +517,14 @@
         color: #644d12;
     }
     .fullwidth-headers3 .header-top-area{
-        background: #FBC02D;
+        background: #0c4c91;
     }
     .sidebar-area .recent-post-area ul li:last-child{
         padding-bottom: 8px;
     }
     .sidebar-area .recent-post-area,
-    .sidebar-area .cate-box, 
-    .sidebar-area .archives-box, 
+    .sidebar-area .cate-box,
+    .sidebar-area .archives-box,
     .slider-main .slider-text {
         margin-top: 30px;
     }
@@ -531,22 +534,22 @@
     .slider-main .owl-dots, .slider-section2 .owl-dots {
         bottom: 20px;
     }
-    .slider-main .dsc .btn-slider .btn1, 
-    .slider-main .dsc .btn-slider .btn2, 
+    .slider-main .dsc .btn-slider .btn1,
+    .slider-main .dsc .btn-slider .btn2,
     .slider-section2 .dsc .btn-slider .btn2,
     .slider-section2 .dsc .btn-slider .btn1 {
         padding: 5px 35px;
     }
-    .fullwidth-headers3 .rs-menu > ul > li.active > a, 
+    .fullwidth-headers3 .rs-menu > ul > li.active > a,
     .fullwidth-headers3 .rs-menu .nav-menu > li > a:hover{
-        color: #fbc02d !important;
+        color: #0c4c91 !important;
     }
     .fullwidth-headers3 .header-middle-area .search .search-btn,
     .fullwidth-headers3 .rs-menu .nav-menu > li > a{
          color: #fff !important;
     }
     .fullwidth-headers3 .header-middle-area .search .search-btn:hover{
-        color: #FBC02D !important;
+        color: #0c4c91 !important;
     }
     .fullwidth-headers3 .header-middle-area .search {
         right: 15px;
@@ -564,7 +567,7 @@
     .all-news-area2 .latest-news2{
         margin-top: 45px;
     }
-    .full-section-banner::after, 
+    .full-section-banner::after,
     .full-section-banner::before {
         bottom: 2%;
     }
@@ -615,7 +618,7 @@
         margin-top: 50px;
         overflow: hidden;
     }
-    .single-product-page .single-product-area .single-product-nav .slick-prev, 
+    .single-product-page .single-product-area .single-product-nav .slick-prev,
     .single-product-page .single-product-area .single-product-nav .slick-next {
         height: 88px;
     }
@@ -706,64 +709,64 @@
     }
     .breking-new-area::after,
     .latest-news-slider .slick-arrow,
-    .slider-main .owl-dots, 
+    .slider-main .owl-dots,
     .slider-section2 .owl-dots{
         display: none !important;
     }
-    .slider-main .dsc .btn-slider a, 
+    .slider-main .dsc .btn-slider a,
     .slider-section2 .dsc .btn-slider a,
-    .slider-main .dsc .btn-slider .btn1, 
+    .slider-main .dsc .btn-slider .btn1,
     .slider-section2 .dsc .btn-slider .btn1 {
         padding: 5px 30px;
     }
-    .slider-main .btm-date, 
+    .slider-main .btm-date,
     .slider-section2 .btm-date {
         font-size: 12px;
         line-height: 20px;
     }
-	.upcoming-section .vs, 
-    .upcoming-section2 .vs, 
-    .upcoming-section3 .vs, 
+	.upcoming-section .vs,
+    .upcoming-section2 .vs,
+    .upcoming-section3 .vs,
     .upcoming-section4 .vs {
         padding: 15px 0 10px;
     }
     .all-news-area .latest-news .inner-news.big-news,
-	.upcoming-section .first, 
-    .upcoming-section2 .first, 
-    .upcoming-section3 .first, 
+	.upcoming-section .first,
+    .upcoming-section2 .first,
+    .upcoming-section3 .first,
     .upcoming-section4 .first {
         margin-bottom: 30px;
     }
-    .upcoming-section .owl-nav, 
+    .upcoming-section .owl-nav,
     .upcoming-section2 .owl-nav,
-	.upcoming-section .last, 
-    .upcoming-section2 .last, 
-    .upcoming-section3 .last, 
+	.upcoming-section .last,
+    .upcoming-section2 .last,
+    .upcoming-section3 .last,
     .upcoming-section4 .last {
         margin-top: 30px;
     }
-	.upcoming-section .owl-nav .owl-prev, 
-	.upcoming-section .owl-nav .owl-next, 
+	.upcoming-section .owl-nav .owl-prev,
+	.upcoming-section .owl-nav .owl-next,
     .upcoming-section2 .owl-nav .owl-prev,
     .upcoming-section2 .owl-nav .owl-next{
         display: inline-block;
         margin: 0 15px;
     }
-    .upcoming-section h2, 
-    .upcoming-section2 h2, 
-    .upcoming-section3 h2, 
-    .upcoming-section4 h2, 
-    .banner-sections .banner-text-area .banner-innner h1, 
-    .slider-main .dsc h2, .slider-section2 .dsc h2, 
+    .upcoming-section h2,
+    .upcoming-section2 h2,
+    .upcoming-section3 h2,
+    .upcoming-section4 h2,
+    .banner-sections .banner-text-area .banner-innner h1,
+    .slider-main .dsc h2, .slider-section2 .dsc h2,
     .slider-main .dsc h1, .slider-section2 .dsc h1 {
         font-size: 25px;
         line-height: 30px;
     }
-    .clicent-logo-section, 
+    .clicent-logo-section,
     .clicent-logo-section2{
         padding-bottom: 50px;
     }
-    .clicent-logo-section .single-logo, 
+    .clicent-logo-section .single-logo,
     .clicent-logo-section2 .single-logo {
         margin-bottom: 20px;
     }
@@ -771,7 +774,7 @@
     .match-list{
         padding-bottom: 0;
     }
-    
+
     .match-list tr,
     .match-list td{
         display: block;
@@ -948,11 +951,11 @@
         width: 100%;
         float: non;
     }
-    .slider-main .btm-date, 
+    .slider-main .btm-date,
     .slider-section2 .btm-date {
         display: none;
     }
-    .slider-main .btn-slider, 
+    .slider-main .btn-slider,
     .slider-section2 .btn-slider {
         margin-top: 20px;
     }
@@ -963,15 +966,15 @@
     .slider-main.slider-section4 .slider-text h1 {
         font-size: 20px;
     }
-    .gallery-section-area .grid .grid-item::before, 
-    .gallery-section-area #gallery-items .grid-item::before, 
-    .gallery-section-area .grid .single-gallery::before, 
+    .gallery-section-area .grid .grid-item::before,
+    .gallery-section-area #gallery-items .grid-item::before,
+    .gallery-section-area .grid .single-gallery::before,
     .gallery-section-area #gallery-items .single-gallery::before {
         bottom: -150px;
     }
-    .gallery-section-area .grid .grid-item::after, 
-    .gallery-section-area #gallery-items .grid-item::after, 
-    .gallery-section-area .grid .single-gallery::after, 
+    .gallery-section-area .grid .grid-item::after,
+    .gallery-section-area #gallery-items .grid-item::after,
+    .gallery-section-area .grid .single-gallery::after,
     .gallery-section-area #gallery-items .single-gallery::after {
         top: -150px;
     }
@@ -1056,7 +1059,7 @@
     .world-cup-page .list-three table tr td:last-child {
         width: 165px;
     }
-    .champion-section-area .champion-inner::before, 
+    .champion-section-area .champion-inner::before,
     .champion-section-area .champion-inner::after {
         width: 93.5%;
     }
@@ -1127,7 +1130,7 @@
     }
     .slider-images ul.slides li img,
     .full-section-banner .banner-sections img,
-    .slider-main .owl-carousel .owl-item img, 
+    .slider-main .owl-carousel .owl-item img,
     .slider-section2 .item img{
         min-height: 200px;
     }
@@ -1141,25 +1144,25 @@
         margin-right: 6px;
     }
     .header-top-area .social-media-area ul li a ,
-    .header-top-area .social-media-area .log a, 
+    .header-top-area .social-media-area .log a,
     .header-top-area .social-media-area .sign a {
         font-size: 13px;
     }
-    .slider-main .dsc .btn-slider a, 
-    .slider-section2 .dsc .btn-slider a, 
-    .slider-main .dsc .btn-slider .btn1, 
+    .slider-main .dsc .btn-slider a,
+    .slider-section2 .dsc .btn-slider a,
+    .slider-main .dsc .btn-slider .btn1,
     .slider-section2 .dsc .btn-slider .btn1 {
         padding: 5px 12px;
         margin: 0 5px;
         font-size: 12px;
     }
-    .slider-main .dsc h2, .slider-section2 .dsc h2, 
+    .slider-main .dsc h2, .slider-section2 .dsc h2,
     .slider-main .dsc h1, .slider-section2 .dsc h1 {
         font-size: 20px;
         line-height: 25px;
     }
-    .today-match-teams .today-score .today-match-team, 
-    .today-match-teams .today-score .today-final-score, 
+    .today-match-teams .today-score .today-match-team,
+    .today-match-teams .today-score .today-final-score,
     .today-match-teams .today-score .today-match-team {
         display: block;
         margin: 0 auto;
@@ -1171,19 +1174,19 @@
     .today-match-teams .today-score .today-final-score h4{
         margin: 10px;
     }
-    .point-list table.point-table th, 
+    .point-list table.point-table th,
     .point-list table.point-table td,
     .today-match-teams .today-results-table tr td {
         padding: 7px 12px;
         font-size: 13px;
     }
-    .latest-news .small-news .news-img, 
+    .latest-news .small-news .news-img,
     .latest-news2 .small-news .news-img {
         float: none;
         margin-right: 0;
         margin-bottom: 10px;
     }
-    .latest-news .small-news + .small-news, 
+    .latest-news .small-news + .small-news,
     .latest-news2 .small-news + .small-news{
         margin-top: 30px;
     }
@@ -1266,7 +1269,7 @@
         width: auto;
     }
     .rs-point-table .tab-content table tr td {
-        width: auto; 
+        width: auto;
         border: 1px solid #e1e1e1;
         font-size: 12px;
         padding: 3px;
@@ -1341,7 +1344,7 @@
     .champion-section-area .champion-inner .champion-details .champion-year {
         font-size: 25px;
     }
-    .champion-section-area .champion-inner::before, 
+    .champion-section-area .champion-inner::before,
     .champion-section-area .champion-inner::after {
         width: 90.5%;
     }
@@ -1353,7 +1356,7 @@
         padding: 0;
     }
     .default-pagination ul li a,
-    .default-pagination ul li:first-child a, 
+    .default-pagination ul li:first-child a,
     .default-pagination ul li:last-child a {
         margin: 0 auto;
     }
