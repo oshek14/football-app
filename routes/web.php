@@ -30,5 +30,6 @@ Route::post('/language-changed', function(Request $request){
 
 Route::group(['prefix' => '{locale}', 'where' => ['locale' => '(en|ge)'], 'middleware' => 'setlocale'], function() {
     Route::get('/', 'App\Http\Controllers\IndexController@index')->name('index');
+    Route::get('/news', 'App\Http\Controllers\NewsController@index')->name('news');
 });
 

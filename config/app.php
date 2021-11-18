@@ -82,6 +82,10 @@ return [
 
     'locale' => 'ge',
 
+    'available_locales' => [
+        'ge' => 'ქართული',
+        'en' => 'English'
+    ],
     /*
     |--------------------------------------------------------------------------
     | Application Fallback Locale
