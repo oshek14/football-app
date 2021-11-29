@@ -7,7 +7,7 @@
     <title>Blog | Soccer</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="apple-touch-icon" href="apple-touch-icon.png')}}">
+    <link rel="apple-touch-icon" href="{{asset('apple-touch-icon.png')}}">
     <!-- Place favicon.ico in the root directory -->
     <link rel="shortcut icon" type="image/x-icon" href="{{asset('images/fav.png')}}">
     <!-- bootstrap v3.3.6 css -->
@@ -330,7 +330,6 @@
 
     <!-- Search Modal Start Here -->
     @include('layout.search')
-
     <!-- Search Modal End Here -->
 
     <!-- Start scrollUp  -->
@@ -367,4 +366,3 @@
 </body>
 
 </html>
-

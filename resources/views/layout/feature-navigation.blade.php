@@ -15,52 +15,28 @@
                                 <a href="{{ route('index', ['locale' => Config::get('app.locale')]) }}">Home</a>
                             </li>
                             <!-- End Home -->
+                            <li class="{{ Request::routeIs('about') ? 'current_page_item' : '' }}">
+                                <a href="{{ route('about', ['locale' => Config::get('app.locale')]) }}">About Us</a>
+                            </li>
 
                             <!-- Drop Down -->
-                            <li class="menu-item-has-children">
-                                <a href="#">Club List</a>
+                            <li class="menu-item-has-children"
+                                class="{{ Request::routeIs('club') ? 'current_page_item' : '' }}">
+                                <a href="#">Clubs</a>
                                 <ul class="sub-menu">
-                                    <li><a href="badda.html">Badda FC</a></li>
-                                    <li><a href="banani.html">Banani FC</a></li>
-                                    <li><a href="trisali.html">Trishal FC</a></li>
-                                    <li><a href="dhoar.html">Dhoar FC</a></li>
-                                    <li><a href="mirpur.html">Mirpur FC</a></li>
-                                    <li><a href="Joypur.html">Joypur FC</a></li>
+                                    <li class="{{ isset($id) && $id == 1 ? 'current_page_item' : '' }}"><a
+                                            href="{{ route('club', [ 'id' => '1', 'locale' => Config::get('app.locale')]) }}">Club
+                                            1</a></li>
+                                    <li class="{{ isset($id) && $id == 2 ? 'current_page_item' : '' }}"><a
+                                            href="{{ route('club', [ 'id' => '2', 'locale' => Config::get('app.locale')]) }}">Club
+                                            2</a></li>
+                                    <li class="{{ isset($id) && $id == 3 ? 'current_page_item' : '' }}"><a
+                                            href="{{ route('club', [ 'id' => '3', 'locale' => Config::get('app.locale')]) }}">Club
+                                            3</a></li>
                                 </ul>
                             </li>
                             <!-- Drop Down -->
-                            <li class="menu-item-has-children">
-                                <a href="#">Pages</a>
-                                <ul class="sub-menu">
-                                    <li><a href="about.html">About</a></li>
-                                    <li><a href="world-cup.html">World Cup</a></li>
-                                    <li class="menu-item-has-children">
-                                        <a href="#">Team</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="team.html">Team</a></li>
-                                            <li><a href="team-single.html">Team Single</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="menu-item-has-children">
-                                        <a href="#">Gallery</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="gallery.html">Gallery</a></li>
-                                            <li><a href="gallery2.html">Gallery Two</a></li>
-                                            <li><a href="gallery3.html">Gallery Three</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="menu-item-has-children">
-                                        <a href="#">Shop</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="shop.html">Shop</a></li>
-                                            <li><a href="shop-single.html">Shop Single</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="cart.html">Cart</a></li>
-                                    <li><a href="checkout.html">Checkout</a></li>
-                                    <li><a href="error-404.html">Error 404</a></li>
-                                </ul>
-                            </li>
+
                             <!--End Icons -->
                             <li><a href="point-table.html">Point Table</a></li>
                             <li class="menu-item-has-children">
@@ -74,7 +50,9 @@
                             <li class="{{ Request::routeIs('news') ? 'current_page_item' : '' }}">
                                 <a href="{{ route('news', ['locale' => Config::get('app.locale')]) }}">News</a>
                             </li>
-                            <li><a href="contact.html">Contact</a></li>
+                            <li class="{{ Request::routeIs('contact') ? 'current_page_item' : '' }}">
+                                <a href="{{ route('contact', ['locale' => Config::get('app.locale')]) }}">Contact</a>
+                            </li>
                         </ul>
                     </nav>
                     <!--Header Search Start  here-->
@@ -88,4 +66,3 @@
         </div>
     </div>
 </div>
-

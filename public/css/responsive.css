@@ -373,7 +373,7 @@
     }
     .header-middle-area4,
     .header-middle-area{
-        background: white !important;
+        background: #111111;
     }
     .rs-menu{
 		visibility: visible;
@@ -1032,7 +1032,7 @@
     }
     .testimonil-section-page .slick-current .author-info p {
         padding: 0 10px;
-        color: #111111;
+        color: #ffffff;
     }
     .single-blog-details blockquote {
         font-size: 14px;

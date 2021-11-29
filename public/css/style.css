@@ -1564,7 +1564,7 @@ body .modal-backdrop {
 .nav-menu ul .current_page_item a,
 .mega-menu li p a:hover,
 .fullwidth-headers3 .rs-menu .nav-menu>li>a {
-    color: #0c4c91 !important;
+    color: #1265bf !important;
 }
 
 .fullwidth-headers3 .rs-menu .nav-menu>li.current_page_item>a,
@@ -2360,7 +2360,7 @@ body .modal-backdrop {
 }
 
 .rs-history-area .history-innner .tab-content p {
-    color: #111111;
+    color: #ffffff;
     font-style: italic;
     font-size: 15px;
 }
@@ -2376,6 +2376,7 @@ body .modal-backdrop {
     font-family: #0c4c91;
     text-align: center;
     margin: 0;
+    color: white;
 }
 
 .rs-history-area .history-innner .position h4 span {
@@ -3650,6 +3651,7 @@ body .modal-backdrop {
     margin: 8px 0 16px;
     padding: 0 0 44px;
     position: relative;
+    color: white;
 }
 
 .testimonil-section-page .single-testimonil .author-info h4:after {
@@ -3715,7 +3717,7 @@ body .modal-backdrop {
 
 .testimonil-section-page .slick-current .author-info p {
     padding: 0;
-    color: #111111;
+    color: #ffffff;
 }
 
 /* ------------------------------------
