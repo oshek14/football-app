@@ -38,15 +38,9 @@
                             <!-- Drop Down -->
 
                             <!--End Icons -->
-                            <li><a href="point-table.html">Point Table</a></li>
-                            <li class="menu-item-has-children">
-                                <a href="#">Result</a>
-                                <ul class="sub-menu">
-                                    <li><a href="result.html">Result</a></li>
-                                    <li><a href="result-single.html">Result Single</a></li>
-                                </ul>
+                            <li class="{{ Request::routeIs('gallery') ? 'current_page_item' : '' }}">
+                                <a href="{{ route('gallery', ['locale' => Config::get('app.locale')]) }}">Gallery</a>
                             </li>
-                            <li><a href="match-fixtures.html">Fixtures & Tickets</a></li>
                             <li class="{{ Request::routeIs('news') ? 'current_page_item' : '' }}">
                                 <a href="{{ route('news', ['locale' => Config::get('app.locale')]) }}">News</a>
                             </li>

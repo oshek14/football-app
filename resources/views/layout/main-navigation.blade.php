@@ -29,13 +29,6 @@
                                             3</a></li>
                                 </ul>
                             </li>
-
-                            <li class="menu-item-has-children"><a href="#">Result</a>
-                                <ul class="sub-menu">
-                                    <li><a href="result.html">Result</a></li>
-                                    <li><a href="result-single.html">Result Single</a></li>
-                                </ul>
-                            </li>
                         </ul>
                     </nav>
                 </div>
@@ -51,7 +44,9 @@
                 <div class="row margin">
                     <nav class="rs-menu rs-menu-right">
                         <ul class="nav-menu">
-                            <li><a href="match-fixtures.html">Fixtures & Tickets</a></li>
+                            <li class="{{ Request::routeIs('gallery') ? 'current_page_item' : '' }}">
+                                <a href="{{ route('gallery', ['locale' => Config::get('app.locale')]) }}">Gallery</a>
+                            </li>
                             <li class="{{ Request::routeIs('news') ? 'current_page_item' : '' }}">
                                 <a href="{{ route('news', ['locale' => Config::get('app.locale')]) }}">News</a>
                             </li>
@@ -98,15 +93,9 @@
                                             3</a></li>
                                 </ul>
                             </li>
-                            <!--End Icons -->
-                            <li class="menu-item-has-children">
-                                <a href="#">Team</a>
-                                <ul class="sub-menu">
-                                    <li><a href="team.html">Team</a></li>
-                                    <li><a href="team-single.html">Team Single</a></li>
-                                </ul>
+                            <li class="{{ Request::routeIs('gallery') ? 'current_page_item' : '' }}">
+                                <a href="{{ route('gallery', ['locale' => Config::get('app.locale')]) }}">Gallery</a>
                             </li>
-                            <li><a href="match-fixtures.html">Fixtures & Tickets</a></li>
                             <li class="{{ Request::routeIs('news') ? 'current_page_item' : '' }}">
                                 <a href="{{ route('news', ['locale' => Config::get('app.locale')]) }}">News</a>
                             </li>
