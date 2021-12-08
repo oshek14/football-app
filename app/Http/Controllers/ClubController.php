@@ -7,7 +7,6 @@ class ClubController extends Controller
 {
     public function index(Request $request)
     {
-
         return view('club')->with('id', $request->id);
     }
 }

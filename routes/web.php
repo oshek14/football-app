@@ -35,6 +35,7 @@ Route::group(['prefix' => '{locale}', 'where' => ['locale' => '(en|ge)'], 'middl
     Route::get('/contact', 'App\Http\Controllers\ContactController@index')->name('contact');
     Route::get('/gallery', 'App\Http\Controllers\GalleryController@index')->name('gallery');
     Route::get('/club/{id}', 'App\Http\Controllers\ClubController@index')->name('club');
+    Route::get('/blogpost/{id}', 'App\Http\Controllers\BlogPostController@index')->name('blogpost');
 });
 
 Route::group(['prefix' => 'admin'], function () {

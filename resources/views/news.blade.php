@@ -76,211 +76,37 @@
     <div id="rs-blog" class="rs-blog sec-spacer">
         <div class="container">
             <div class="row">
+
+                @foreach ($blogposts as $blogpost)
                 <div class="col-md-3 col-sm-6 col-xs-6">
                     <div class="single-blog-slide">
                         <div class="images">
-                            <a href="blog-single.html"><img src="{{asset('images/blog/1.jpg')}}" alt="Blog Image"></a>
+                            <a href="{{ route('blogpost', [ 'id' => $blogpost->id, 'locale' => Config::get('app.locale')]) }}"><img
+                                    src="{{asset('images/blog/1.jpg')}}" alt="Blog Image"></a>
                         </div>
                         <div class="blog-details">
                             <span class="date"><i class="fa fa-calendar-check-o"></i> 11 Apr 2017</span>
-                            <h3><a href="blog-single.html">City Tops Chelsea in Community Shield </a></h3>
+                            <h3><a
+                                    href="{{ route('blogpost', [ 'id' => $blogpost->id, 'locale' => Config::get('app.locale')]) }}">
+                                    {{$blogpost->title}}
+                                </a>
+                            </h3>
                             <p>I will give you a complete account of the system, and expound the actual teachings of the
                                 great explorer of the truth.</p>
                             <div class="read-more">
-                                <a href="blog-single.html">Read More</a>
+                                <a
+                                    href="{{ route('blogpost', [ 'id' => $blogpost->id, 'locale' => Config::get('app.locale')]) }}">Read
+                                    More</a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 col-sm-6 col-xs-6">
-                    <div class="single-blog-slide">
-                        <div class="images">
-                            <a href="blog-single.html"><img src="{{asset('images/blog/2.jpg')}}" alt="Blog Image"></a>
-                        </div>
-                        <div class="blog-details">
-                            <span class="date"><i class="fa fa-calendar-check-o"></i> 11 Apr 2017</span>
-                            <h3><a href="blog-single.html">United We Stand, United We Write </a></h3>
-                            <p>I will give you a complete account of the system, and expound the actual teachings of the
-                                great explorer of the truth.</p>
-                            <div class="read-more">
-                                <a href="blog-single.html">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-6">
-                    <div class="single-blog-slide">
-                        <div class="images">
-                            <a href="blog-single.html"><img src="{{asset('images/blog/3.jpg')}}" alt="Blog Image"></a>
-                        </div>
-                        <div class="blog-details">
-                            <span class="date"><i class="fa fa-calendar-check-o"></i> 11 Apr 2017</span>
-                            <h3><a href="blog-single.html">The Award Winning Trishal FC Blog and News Site </a></h3>
-                            <p>I will give you a complete account of the system, and expound the actual teachings of the
-                                great explorer of the truth.</p>
-                            <div class="read-more">
-                                <a href="blog-single.html">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-6">
-                    <div class="single-blog-slide">
-                        <div class="images">
-                            <a href="blog-single.html"><img src="{{asset('images/blog/4.jpg')}}" alt="Blog Image"></a>
-                        </div>
-                        <div class="blog-details">
-                            <span class="date"><i class="fa fa-calendar-check-o"></i> 11 Apr 2017</span>
-                            <h3><a href="blog-single.html">The Award Winning Trishal FC Blog and News Site </a></h3>
-                            <p>I will give you a complete account of the system, and expound the actual teachings of the
-                                great explorer of the truth.</p>
-                            <div class="read-more">
-                                <a href="blog-single.html">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-6">
-                    <div class="single-blog-slide">
-                        <div class="images">
-                            <a href="blog-single.html"><img src="{{asset('images/blog/5.jpg')}}" alt="Blog Image"></a>
-                        </div>
-                        <div class="blog-details">
-                            <span class="date"><i class="fa fa-calendar-check-o"></i> 11 Apr 2017</span>
-                            <h3><a href="blog-single.html">We're Pretty Big Fans of FC Club </a></h3>
-                            <p>I will give you a complete account of the system, and expound the actual teachings of the
-                                great explorer of the truth.</p>
-                            <div class="read-more">
-                                <a href="blog-single.html">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-6">
-                    <div class="single-blog-slide">
-                        <div class="images">
-                            <a href="blog-single.html"><img src="{{asset('images/blog/6.jpg')}}" alt="Blog Image"></a>
-                        </div>
-                        <div class="blog-details">
-                            <span class="date"><i class="fa fa-calendar-check-o"></i> 11 Apr 2017</span>
-                            <h3><a href="blog-single.html">Latest Football Statistics For The Premier League </a></h3>
-                            <p>I will give you a complete account of the system, and expound the actual teachings of the
-                                great explorer of the truth.</p>
-                            <div class="read-more">
-                                <a href="blog-single.html">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-6">
-                    <div class="single-blog-slide">
-                        <div class="images">
-                            <a href="blog-single.html"><img src="{{asset('images/blog/7.jpg')}}" alt="Blog Image"></a>
-                        </div>
-                        <div class="blog-details">
-                            <span class="date"><i class="fa fa-calendar-check-o"></i> 11 Apr 2017</span>
-                            <h3><a href="blog-single.html">Everything In Soccer Starts Right Here </a></h3>
-                            <p>I will give you a complete account of the system, and expound the actual teachings of the
-                                great explorer of the truth.</p>
-                            <div class="read-more">
-                                <a href="blog-single.html">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-6">
-                    <div class="single-blog-slide">
-                        <div class="images">
-                            <a href="blog-single.html"><img src="{{asset('images/blog/8.jpg')}}" alt="Blog Image"></a>
-                        </div>
-                        <div class="blog-details">
-                            <span class="date"><i class="fa fa-calendar-check-o"></i> 11 Apr 2017</span>
-                            <h3><a href="blog-single.html">Everything In Soccer Starts Right Here </a></h3>
-                            <p>I will give you a complete account of the system, and expound the actual teachings of the
-                                great explorer of the truth.</p>
-                            <div class="read-more">
-                                <a href="blog-single.html">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-6">
-                    <div class="single-blog-slide">
-                        <div class="images">
-                            <a href="blog-single.html"><img src="{{asset('images/blog/9.jpg')}}" alt="Blog Image"></a>
-                        </div>
-                        <div class="blog-details">
-                            <span class="date"><i class="fa fa-calendar-check-o"></i> 11 Apr 2017</span>
-                            <h3><a href="blog-single.html">Professional Soccer Coaching Advice</a></h3>
-                            <p>I will give you a complete account of the system, and expound the actual teachings of the
-                                great explorer of the truth.</p>
-                            <div class="read-more">
-                                <a href="blog-single.html">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-6">
-                    <div class="single-blog-slide">
-                        <div class="images">
-                            <a href="blog-single.html"><img src="{{asset('images/blog/10.jpg')}}" alt="Blog Image"></a>
-                        </div>
-                        <div class="blog-details">
-                            <span class="date"><i class="fa fa-calendar-check-o"></i> 11 Apr 2017</span>
-                            <h3><a href="blog-single.html">Get the Latest Club United News </a></h3>
-                            <p>I will give you a complete account of the system, and expound the actual teachings of the
-                                great explorer of the truth.</p>
-                            <div class="read-more">
-                                <a href="blog-single.html">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-6">
-                    <div class="single-blog-slide">
-                        <div class="images">
-                            <a href="blog-single.html"><img src="{{asset('images/blog/11.jpg')}}" alt="Blog Image"></a>
-                        </div>
-                        <div class="blog-details">
-                            <span class="date"><i class="fa fa-calendar-check-o"></i> 11 Apr 2017</span>
-                            <h3><a href="blog-single.html">Howler is a Magazine About Soccer </a></h3>
-                            <p>I will give you a complete account of the system, and expound the actual teachings of the
-                                great explorer of the truth.</p>
-                            <div class="read-more">
-                                <a href="blog-single.html">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-6">
-                    <div class="single-blog-slide">
-                        <div class="images">
-                            <a href="blog-single.html"><img src="{{asset('images/blog/12.jpg')}}" alt="Blog Image"></a>
-                        </div>
-                        <div class="blog-details">
-                            <span class="date"><i class="fa fa-calendar-check-o"></i> 11 Apr 2017</span>
-                            <h3><a href="blog-single.html">Howler is a Magazine About Soccer </a></h3>
-                            <p>I will give you a complete account of the system, and expound the actual teachings of the
-                                great explorer of the truth.</p>
-                            <div class="read-more">
-                                <a href="blog-single.html">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
+
             </div>
             <div class="row">
-                <div class="col-sm-12">
-                    <div class="default-pagination text-center">
-                        <ul>
-                            <li><a href="#"><i class="fa fa-angle-left"></i>Previous</a></li>
-                            <li class="active"><a href="#">1</a></li>
-                            <li><a href="#">2</a></li>
-                            <li><a href="#">3</a></li>
-                            <li><a href="#">4</a></li>
-                            <li><a href="#">Next<i class="fa fa-angle-right"></i></a></li>
-                        </ul>
-                    </div>
+                <div class="col-sm-12 news-pagination-numbers">
+                    {{$blogposts->links("pagination::bootstrap-4")}}
                 </div>
             </div>
         </div>

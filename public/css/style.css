@@ -5269,7 +5269,7 @@ body .modal-backdrop {
 
 .single-blog-details .share-section .share-link1 li:first-child a {
     background: #0c4c91;
-    color: #111111;
+    color: white;
     border: 1px solid #0c4c91;
 }
 
@@ -5642,7 +5642,7 @@ body .modal-backdrop {
 
 .sidebar-area span.title {
     font-size: 18px;
-    color: #111111;
+    color: white;
     font-weight: 500;
     text-transform: uppercase;
     display: block;
@@ -5693,7 +5693,6 @@ body .modal-backdrop {
 }
 
 .sidebar-area .recent-post-area {
-    margin-top: 44px;
 }
 
 .sidebar-area .recent-post-area ul li {
@@ -5792,7 +5791,7 @@ body .modal-backdrop {
 
 .sidebar-area .newsletter-area h3 {
     font-size: 18px;
-    color: #111111;
+    color: white;
     font-weight: 500;
     text-transform: uppercase;
     display: block;
@@ -5802,7 +5801,7 @@ body .modal-backdrop {
 
 .sidebar-area .newsletter-area p {
     font-size: 15px;
-    color: #111111;
+    color: white;
     margin: 7px 0 20px;
 }
 
@@ -7315,6 +7314,12 @@ body .modal-backdrop {
 #preloader span:nth-child(5) {
     left: 53%;
     animation-delay: .8s;
+}
+
+.news-pagination-numbers {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 @keyframes preloader {
