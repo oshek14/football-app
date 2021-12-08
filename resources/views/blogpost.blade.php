@@ -225,3 +225,6 @@
 </body>
 
 </html>
+
+
+{{-- https://www.nicesnippets.com/blog/how-to-use-wysihtml5-editor-in-laravel --}}

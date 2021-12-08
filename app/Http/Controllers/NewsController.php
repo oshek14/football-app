@@ -11,7 +11,7 @@ class NewsController extends Controller
     {
         $blogposts = BlogPost::all();
         return view('news', [
-            'blogposts' => DB::table('blog_posts')->paginate(1)
+            'blogposts' => DB::table('blog_posts')->paginate(12)
         ]);
     }
 }
