@@ -80,9 +80,9 @@
                     <div class="single-image">
                         <img src="{{asset('images/blog-details/1.jpg')}}" alt="single">
                     </div>
-                    <h3>{{$blogpost->title}}</h3>
+                    <h3>{!!$blogpost->title!!}</h3>
                     <p>
-                        {{$blogpost->body}}
+                        {!!$blogpost->description!!}
                     </p>
                     <div class="share-section">
                         <div class="row">

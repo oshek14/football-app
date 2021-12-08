@@ -88,11 +88,12 @@
                             <span class="date"><i class="fa fa-calendar-check-o"></i> 11 Apr 2017</span>
                             <h3><a
                                     href="{{ route('blogpost', [ 'id' => $blogpost->id, 'locale' => Config::get('app.locale')]) }}">
-                                    {{$blogpost->title}}
+                                    {{ $blogpost->title }}
                                 </a>
                             </h3>
-                            <p>I will give you a complete account of the system, and expound the actual teachings of the
-                                great explorer of the truth.</p>
+                            <p>
+                                {{ $blogpost->short_description }}
+                            </p>
                             <div class="read-more">
                                 <a
                                     href="{{ route('blogpost', [ 'id' => $blogpost->id, 'locale' => Config::get('app.locale')]) }}">Read

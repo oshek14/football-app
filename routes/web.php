@@ -43,4 +43,7 @@ Route::group(['prefix' => 'admin'], function () {
     Route::post('/login', 'App\Http\Controllers\Admin\AuthController@postLogin')->name('postLogin');
     Route::get('/', 'App\Http\Controllers\Admin\DashboardController@index')->name('adminDashboard')->middleware('auth');
     Route::get('/logout', 'App\Http\Controllers\Admin\AuthController@getLogout')->name('getLogout')->middleware('auth');
+    Route::post('/blogpost','App\Http\Controllers\BlogPostController@store')->name('blogpost.store');
 });
+
+
