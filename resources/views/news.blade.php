@@ -7,35 +7,35 @@
     <title>Blog | Soccer</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="apple-touch-icon" href="{{asset('apple-touch-icon.png')}}">
+    <link rel="apple-touch-icon" href="{{ asset('apple-touch-icon.png') }}">
     <!-- Place favicon.ico in the root directory -->
-    <link rel="shortcut icon" type="image/x-icon" href="{{asset('images/fav.png')}}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('images/fav.png') }}">
     <!-- bootstrap v3.3.6 css -->
-    <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
     <!-- font-awesome css -->
-    <link rel="stylesheet" href="{{asset('css/font-awesome.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/font-awesome.min.css') }}">
     <!-- animate css -->
-    <link rel="stylesheet" href="{{asset('css/animate.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/animate.css') }}">
     <!-- Main Menu css -->
-    <link rel="stylesheet" href="{{asset('css/rsmenu-main.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/rsmenu-main.css') }}">
     <!-- rsmenu transitions css -->
-    <link rel="stylesheet" href="{{asset('css/rsmenu-transitions.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/rsmenu-transitions.css') }}">
     <!-- hover-min css -->
-    <link rel="stylesheet" href="{{asset('css/hover-min.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/hover-min.css') }}">
     <!-- magnific-popup css -->
-    <link rel="stylesheet" href="{{asset('css/magnific-popup.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/magnific-popup.css') }}">
     <!-- owl.carousel css -->
-    <link rel="stylesheet" href="{{asset('css/owl.carousel.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/owl.carousel.css') }}">
     <!-- Slick css -->
-    <link rel="stylesheet" href="{{asset('css/slick.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/slick.css') }}">
     <!-- Slick Theme css -->
-    <link rel="stylesheet" href="{{asset('css/slick-theme.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/slick-theme.css') }}">
     <!-- style css -->
-    <link rel="stylesheet" href="{{asset('css/style.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <!-- responsive css -->
-    <link rel="stylesheet" href="{{asset('css/responsive.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/responsive.css') }}">
     <!-- modernizr js -->
-    <script src="{{asset('js/modernizr-2.8.3.min.js')}}"></script>
+    <script src="{{ asset('js/modernizr-2.8.3.min.js') }}"></script>
 </head>
 
 <body class="home-two">
@@ -53,7 +53,7 @@
 
     <!-- Breadcrumbs Section Start -->
     <div class="rs-breadcrumbs sec-color">
-        <img src="{{asset('images/breadcrumbs/blog.jpg')}}" alt="Breadcrubs" />
+        <img src="{{ asset('images/breadcrumbs/blog.jpg') }}" alt="Breadcrubs" />
         <div class="breadcrumbs-inner">
             <div class="container">
                 <div class="row">
@@ -78,36 +78,39 @@
             <div class="row">
 
                 @foreach ($blogposts as $blogpost)
-                <div class="col-md-3 col-sm-6 col-xs-6">
-                    <div class="single-blog-slide">
-                        <div class="images">
-                            <a href="{{ route('blogpost', [ 'id' => $blogpost->id, 'locale' => Config::get('app.locale')]) }}"><img
-                                    src="{{asset('images/blog/1.jpg')}}" alt="Blog Image"></a>
-                        </div>
-                        <div class="blog-details">
-                            <span class="date"><i class="fa fa-calendar-check-o"></i> 11 Apr 2017</span>
-                            <h3><a
-                                    href="{{ route('blogpost', [ 'id' => $blogpost->id, 'locale' => Config::get('app.locale')]) }}">
-                                    {{ $blogpost->title }}
-                                </a>
-                            </h3>
-                            <p>
-                                {{ $blogpost->short_description }}
-                            </p>
-                            <div class="read-more">
+                    <div class="col-md-3 col-sm-6 col-xs-6">
+                        <div class="single-blog-slide">
+                            <div class="images">
                                 <a
-                                    href="{{ route('blogpost', [ 'id' => $blogpost->id, 'locale' => Config::get('app.locale')]) }}">Read
-                                    More</a>
+                                    href="{{ route('blogpost', ['id' => $blogpost->id, 'locale' => Config::get('app.locale')]) }}">
+                                    <div class="blog-image-place"
+                                        style="background:url({{ asset('app_images/' . $blogpost->image) }})"></div>
+                            </div>
+                            <div class="blog-details">
+                                <span class="date"><i class="fa fa-calendar-check-o"></i>
+                                    {{ \Carbon\Carbon::parse($blogpost->created_at)->format('d/m/Y') }}</span>
+                                <h3><a
+                                        href="{{ route('blogpost', ['id' => $blogpost->id, 'locale' => Config::get('app.locale')]) }}">
+                                        {{ \Illuminate\Support\Str::limit($blogpost->title, 20, $end='...') }}
+                                    </a>
+                                </h3>
+                                <p>
+                                    {{ \Illuminate\Support\Str::limit($blogpost->short_description, 70, $end='...') }}
+                                </p>
+                                <div class="read-more">
+                                    <a
+                                        href="{{ route('blogpost', ['id' => $blogpost->id, 'locale' => Config::get('app.locale')]) }}">Read
+                                        More</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
                 @endforeach
 
             </div>
             <div class="row">
                 <div class="col-sm-12 news-pagination-numbers">
-                    {{$blogposts->links("pagination::bootstrap-4")}}
+                    {{ $blogposts->links('pagination::bootstrap-4') }}
                 </div>
             </div>
         </div>
@@ -127,23 +130,23 @@
                 data-md-device-dots="false">
                 <div class="item">
                     <div class="single-logo">
-                        <a href="#"><img src="{{asset('images/logo/1.png')}}" alt=""></a>
+                        <a href="#"><img src="{{ asset('images/logo/1.png') }}" alt=""></a>
                     </div>
                 </div>
                 <div class="item">
                     <div class="single-logo">
-                        <a href="#"><img src="{{asset('images/logo/2.png')}}" alt=""></a>
+                        <a href="#"><img src="{{ asset('images/logo/2.png') }}" alt=""></a>
                     </div>
                 </div>
 
                 <div class="item">
                     <div class="single-logo">
-                        <a href="#"><img src="{{asset('images/logo/3.png')}}" alt=""></a>
+                        <a href="#"><img src="{{ asset('images/logo/3.png') }}" alt=""></a>
                     </div>
                 </div>
                 <div class="item">
                     <div class="single-logo">
-                        <a href="#"><img src="{{asset('images/logo/4.png')}}" alt=""></a>
+                        <a href="#"><img src="{{ asset('images/logo/4.png') }}" alt=""></a>
                     </div>
                 </div>
             </div>
@@ -165,31 +168,31 @@
 
     <!-- all js here -->
     <!-- jquery latest version -->
-    <script src="{{asset('js/jquery.min.js')}}"></script>
+    <script src="{{ asset('js/jquery.min.js') }}"></script>
     <!-- Menu js -->
-    <script src="{{asset('js/rsmenu-main.js')}}"></script>
+    <script src="{{ asset('js/rsmenu-main.js') }}"></script>
     <!-- jquery-ui js -->
-    <script src="{{asset('js/jquery-ui.min.js')}}"></script>
+    <script src="{{ asset('js/jquery-ui.min.js') }}"></script>
     <!-- bootstrap js -->
-    <script src="{{asset('js/bootstrap.min.js')}}"></script>
+    <script src="{{ asset('js/bootstrap.min.js') }}"></script>
     <!-- meanmenu js -->
-    <script src="{{asset('js/jquery.meanmenu.js')}}"></script>
+    <script src="{{ asset('js/jquery.meanmenu.js') }}"></script>
     <!-- wow js -->
-    <script src="{{asset('js/wow.min.js')}}"></script>
+    <script src="{{ asset('js/wow.min.js') }}"></script>
     <!-- Slick js -->
-    <script src="{{asset('js/slick.min.js')}}"></script>
+    <script src="{{ asset('js/slick.min.js') }}"></script>
     <!-- masonry js -->
-    <script src="{{asset('js/masonry.js')}}"></script>
+    <script src="{{ asset('js/masonry.js') }}"></script>
     <!-- magnific-popup js -->
     <!-- owl.carousel js -->
-    <script src="{{asset('js/owl.carousel.min.js')}}"></script>
+    <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
     <!-- magnific-popup js -->
-    <script src="{{asset('js/jquery.magnific-popup.js')}}"></script>
+    <script src="{{ asset('js/jquery.magnific-popup.js') }}"></script>
     <!-- jquery.counterup js -->
-    <script src="{{asset('js/jquery.counterup.min.js')}}"></script>
-    <script src="{{asset('js/waypoints.min.js')}}"></script>
+    <script src="{{ asset('js/jquery.counterup.min.js') }}"></script>
+    <script src="{{ asset('js/waypoints.min.js') }}"></script>
     <!-- main js -->
-    <script src="{{asset('js/main.js')}}"></script>
+    <script src="{{ asset('js/main.js') }}"></script>
 </body>
 
 </html>

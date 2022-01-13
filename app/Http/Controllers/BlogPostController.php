@@ -7,7 +7,7 @@ use App\Models\BlogPost;
 
 class BlogPostController extends Controller
 {
-    public function index(Request $request)
+    public function show(Request $request)
     {
         $blogpost = BlogPost::where('id', $request->id)->first();
         return view('blogpost', [
@@ -15,16 +15,4 @@ class BlogPostController extends Controller
         ]);
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        $input = $request->all();
-        BlogPost::create($input);
-        return redirect()->back();
-    }
 }

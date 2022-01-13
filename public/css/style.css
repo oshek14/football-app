@@ -7322,6 +7322,61 @@ body .modal-backdrop {
     justify-content: center;
 }
 
+.blog-image-place {
+    width: 100%;
+    padding-bottom: 60%;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    position: relative !important;
+    transition: all .3s ease-in-out;
+}
+
+.single-blog-slide:hover .blog-image-place{
+    transform: scale(1.1);
+}
+
+.blog-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.blog-list .title-and-image {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.blog-list  h5 {
+    margin-bottom: 5px;
+}
+
+.blog-list  p {
+    margin: 0 !important;
+}
+
+.blog-list .image {
+    width: 150px;
+    height: 100px;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    position: relative !important;
+    flex-shrink: 0;
+}
+
+.blog-list .title {
+    padding: 0 20px;
+}
+
+.blogspots-scroll-container {
+    height: 650px;
+    overflow-y: scroll;
+}
+
 @keyframes preloader {
     0% {
         opacity: 1;

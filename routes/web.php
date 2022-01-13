@@ -35,7 +35,7 @@ Route::group(['prefix' => '{locale}', 'where' => ['locale' => '(en|ge)'], 'middl
     Route::get('/contact', 'App\Http\Controllers\ContactController@index')->name('contact');
     Route::get('/gallery', 'App\Http\Controllers\GalleryController@index')->name('gallery');
     Route::get('/club/{id}', 'App\Http\Controllers\ClubController@index')->name('club');
-    Route::get('/blogpost/{id}', 'App\Http\Controllers\BlogPostController@index')->name('blogpost');
+    Route::get('/blogpost/{id}', 'App\Http\Controllers\BlogPostController@show')->name('blogpost');
 });
 
 Route::group(['prefix' => 'admin'], function () {
@@ -43,7 +43,7 @@ Route::group(['prefix' => 'admin'], function () {
     Route::post('/login', 'App\Http\Controllers\Admin\AuthController@postLogin')->name('postLogin');
     Route::get('/', 'App\Http\Controllers\Admin\DashboardController@index')->name('adminDashboard')->middleware('auth');
     Route::get('/logout', 'App\Http\Controllers\Admin\AuthController@getLogout')->name('getLogout')->middleware('auth');
-    Route::post('/blogpost','App\Http\Controllers\BlogPostController@store')->name('blogpost.store');
+    Route::post('/blogpost','App\Http\Controllers\Admin\BlogPostController@store')->name('blogpost.store');
+    Route::get('/blogposts','App\Http\Controllers\Admin\BlogPostController@index')->name('blogposts.index');
+    Route::delete('/blogspot/{id}','App\Http\Controllers\Admin\BlogPostController@destroy')->name('blogpost.destroy');
 });
-
-
