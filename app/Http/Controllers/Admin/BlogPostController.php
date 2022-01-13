@@ -46,7 +46,10 @@ class BlogPostController extends Controller
 
     public function destroy($id)
     {
-        BlogPost::where('id', $id)->delete();
+        $blogpost = BlogPost::where('id', $id)->first();
+        $file_path = public_path() . '/app_images' . '/' . $blogpost->image;
+        unlink($file_path);
+        $blogpost->delete();
         return redirect()->route('blogposts.index');
     }
 }
