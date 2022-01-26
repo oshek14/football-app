@@ -163,9 +163,9 @@
                         their infancy.</p>
                     <ul class="point-menu">
                         <li class="active"><a data-toggle="tab" href="#squad-list">Players</a></li>
-                        <li><a data-toggle="tab" href="#champion">Champion</a></li>
+                        {{-- <li><a data-toggle="tab" href="#champion">Champion</a></li> --}}
                         <li><a data-toggle="tab" href="#gallery">Gallery</a></li>
-                        <li><a data-toggle="tab" href="#jersy">Jersy</a></li>
+                        {{-- <li><a data-toggle="tab" href="#jersy">Jersy</a></li> --}}
                     </ul>
                     <div class="tab-content">
                         <div id="squad-list" class="tab-pane fade in active">
@@ -243,7 +243,7 @@
                             </div>
                             <!--Squad Style End -->
                         </div>
-                        <div id="champion" class="tab-pane fade">
+                        {{-- <div id="champion" class="tab-pane fade">
                             <div class="row">
                                 <div class="champion-inner">
                                     <div class="col-sm-2 col-xs-3">
@@ -318,7 +318,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> --}}
                         <div id="gallery" class="tab-pane fade">
                             <div class="gallery-section-page2 gallery-section-area">
                                 <div class="row">
@@ -397,7 +397,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div id="jersy" class="tab-pane fade">
+                        {{-- <div id="jersy" class="tab-pane fade">
                             <div class="row">
                                 <div class="champion-inner">
                                     <div class="col-sm-2 col-xs-3">
@@ -428,7 +428,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
             </div>

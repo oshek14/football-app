@@ -43,72 +43,46 @@
                     <div class="blogpost-form-wrapper">
                         <div class="blogpost-form-container">
                             <h2>Add blog post</h2>
-                            @if (session()->get('addblogPostStatus') === 1)
+                            @if (session()->get('updateblogPostStatus') === 1)
                                 <div class="alert alert-success alert-dismissible" role="alert">
                                     <button type="button" class="close" data-dismiss="alert"
                                         aria-label="Close"><span aria-hidden="true">×</span></button>
-                                    <i class="fa fa-check-circle"></i> Blog post added succesfully
+                                    <i class="fa fa-check-circle"></i> Blog post updated succesfully
                                 </div>
                             @endif
-                            @if (session()->get('addblogPostStatus') === 0)
+                            @if (session()->get('updateblogPostStatus') === 0)
                                 <div class="alert alert-danger alert-dismissible" role="alert">
                                     <button type="button" class="close" data-dismiss="alert"
                                         aria-label="Close"><span aria-hidden="true">×</span></button>
                                     <i class="fa fa-times-circle"></i> Something went wrong
                                 </div>
                             @endif
-                            <form class="image-upload" method="post" action="{{ route('blogpost.store') }}"
+                            <form class="image-upload" method="POST" action="{{ route('blogpost.update') }}"
                                 enctype="multipart/form-data">
                                 @csrf
+                                @method('put')
                                 <div class="form-group">
                                     <label>Title</label>
-                                    <input type="text" name="title" class="form-control" required />
+                                    <input type="text" name="title" class="form-control" required value="{{$blogpost->title}}" />
                                 </div>
                                 <div class="form-group">
                                     <label>Short Description</label>
-                                    <input type="text" name="short_description" class="form-control" required />
+                                    <input type="text" name="short_description" class="form-control" required value="{{$blogpost->short_description}}" />
                                 </div>
                                 <div class="form-group">
                                     <label>Image</label>
-                                    <input type="file" name="image" class="form-control" required />
+                                    <input type="file" name="image" class="form-control" required value="{{$blogpost->image}}" />
                                 </div>
                                 <div class="form-group">
                                     <label>Description</label>
                                     <textarea name="description" class="textarea"
-                                        style="width: 100%; height: 250px"></textarea>
+                                        style="width: 100%; height: 250px">{{$blogpost->description}}</textarea>
                                 </div>
+                                <input type="hidden" name="id" class="form-control" value="{{$blogpost->id}}" />
                                 <div class="form-group text-center">
-                                    <button type="submit" class="btn btn-primary btn-block">Save</button>
+                                    <button type="submit" class="btn btn-primary btn-block">Update</button>
                                 </div>
                             </form>
-                        </div>
-                        <div class="blogpost-blogs-container">
-                            <h2>Blog posts</h2>
-                            <div class="blogposts-scroll-container">
-                                @foreach ($blogposts as $blogpost)
-                                    <div class="blog-list">
-                                        <div class="title-and-image">
-                                            <div class="image"
-                                            style="background:url({{ asset('app_images/' . $blogpost->image) }})">
-                                            </div>
-                                            <div class="title">
-                                                <h5>{{ \Illuminate\Support\Str::limit($blogpost->title, 20, $end='...') }}</h5>
-                                                <p>{{ \Illuminate\Support\Str::limit($blogpost->short_description, 45, $end='...') }}</p>
-                                            </div>
-                                        </div>
-                                        <form action="{{ url('/admin/blogpost/edit/' . $blogpost->id) }}" method="get">
-                                            <input class="btn btn-warning" type="submit" value="Edit" />
-                                            @method('get')
-                                            @csrf
-                                        </form>&nbsp;&nbsp;
-                                        <form action="{{ url('/admin/blogpost/' . $blogpost->id) }}" method="POST">
-                                            <input class="btn btn-danger" type="submit" value="Delete" />
-                                            @method('delete')
-                                            @csrf
-                                        </form>&nbsp;&nbsp;
-                                    </div>
-                                @endforeach
-                            </div>
                         </div>
                     </div>
                 </div>

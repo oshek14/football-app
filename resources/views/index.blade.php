@@ -10,33 +10,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <!-- Place favicon.ico in the root directory -->
-    <link rel="shortcut icon" type="image/x-icon" href="{{asset('images/fav.png')}}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('images/fav.png') }}">
     <!-- bootstrap v3.3.6 css -->
-    <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
     <!-- font-awesome css -->
-    <link rel="stylesheet" href="{{asset('css/font-awesome.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/font-awesome.min.css') }}">
     <!-- animate css -->
-    <link rel="stylesheet" href="{{asset('css/animate.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/animate.css') }}">
     <!-- Main Menu css -->
-    <link rel="stylesheet" href="{{asset('css/rsmenu-main.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/rsmenu-main.css') }}">
     <!-- rsmenu transitions css -->
-    <link rel="stylesheet" href="{{asset('css/rsmenu-transitions.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/rsmenu-transitions.css') }}">
     <!-- hover-min css -->
-    <link rel="stylesheet" href="{{asset('css/hover-min.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/hover-min.css') }}">
     <!-- magnific-popup css -->
-    <link rel="stylesheet" href="{{asset('css/magnific-popup.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/magnific-popup.css') }}">
     <!-- owl.carousel css -->
-    <link rel="stylesheet" href="{{asset('css/owl.carousel.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/owl.carousel.css') }}">
     <!-- Flexslider css -->
-    <link rel="stylesheet" href="{{asset('css/flexslider.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/flexslider.css') }}">
     <!-- Slick css -->
-    <link rel="stylesheet" href="{{asset('css/slick.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/slick.css') }}">
     <!-- style css -->
-    <link rel="stylesheet" href="{{asset('css/style.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <!-- responsive css -->
-    <link rel="stylesheet" href="{{asset('css/responsive.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/responsive.css') }}">
     <!-- modernizr js -->
-    <script src="{{asset('js/modernizr-2.8.3.min.js')}}"></script>
+    <script src="{{ asset('js/modernizr-2.8.3.min.js') }}"></script>
 </head>
 
 <body class="home-two">
@@ -58,7 +58,7 @@
             <div id="slider-images" class="flexslider">
                 <ul class="slides">
                     <li>
-                        <img src="{{asset('images/full-slider/5.jpg')}}" alt="" />
+                        <img src="{{ asset('images/full-slider/5.jpg') }}" alt="" />
                         <div class="single-slide text-center">
                             <div class="container">
                                 <div class="dsc">
@@ -75,7 +75,7 @@
                         </div>
                     </li>
                     <li>
-                        <img src="{{asset('images/full-slider/6.jpg')}}" alt="" />
+                        <img src="{{ asset('images/full-slider/6.jpg') }}" alt="" />
                         <div class="single-slide text-center">
                             <div class="container">
                                 <div class="dsc">
@@ -92,7 +92,7 @@
                         </div>
                     </li>
                     <li>
-                        <img src="{{asset('images/full-slider/7.jpg')}}" alt="" />
+                        <img src="{{ asset('images/full-slider/7.jpg') }}" alt="" />
                         <div class="single-slide text-center">
                             <div class="container">
                                 <div class="dsc">
@@ -116,13 +116,13 @@
                         <div class="col-sm-12">
                             <ul class="slides">
                                 <li>
-                                    <img src="{{asset('images/full-slider/small1.jpg')}}" alt="" />
+                                    <img src="{{ asset('images/full-slider/small1.jpg') }}" alt="" />
                                 </li>
                                 <li>
-                                    <img src="{{asset('images/full-slider/small2.jpg')}}" alt="" />
+                                    <img src="{{ asset('images/full-slider/small2.jpg') }}" alt="" />
                                 </li>
                                 <li>
-                                    <img src="{{asset('images/full-slider/small3.jpg')}}" alt="" />
+                                    <img src="{{ asset('images/full-slider/small3.jpg') }}" alt="" />
                                 </li>
                             </ul>
                         </div>
@@ -148,7 +148,7 @@
                         data-ipad-device-dots2="false" data-md-device="3" data-md-device-nav="false"
                         data-md-device-dots="false">
                         <div class="our-team">
-                            <img src="{{asset('images/team/2.jpg')}}" alt="" />
+                            <img src="{{ asset('images/team/2.jpg') }}" alt="" />
                             <div class="person-details">
                                 <div class="overly-bg"></div>
                                 <a href="team-single.html">
@@ -176,7 +176,8 @@
                                             <td>Fallow us on</td>
                                             <td>
                                                 <ul class="person-social-icons">
-                                                    <li><a href="#" class="active"><i class="fa fa-facebook"></i></a>
+                                                    <li><a href="#" class="active"><i
+                                                                class="fa fa-facebook"></i></a>
                                                     </li>
                                                     <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                                                     <li><a href="#"><i class="fa fa-linkedin"
@@ -189,7 +190,7 @@
                             </div>
                         </div>
                         <div class="our-team">
-                            <img src="{{asset('images/team/3.jpg')}}" alt="" />
+                            <img src="{{ asset('images/team/3.jpg') }}" alt="" />
                             <div class="person-details">
                                 <div class="overly-bg"></div>
                                 <a href="team-single.html">
@@ -217,7 +218,8 @@
                                             <td>Fallow us on</td>
                                             <td>
                                                 <ul class="person-social-icons">
-                                                    <li><a href="#" class="active"><i class="fa fa-facebook"></i></a>
+                                                    <li><a href="#" class="active"><i
+                                                                class="fa fa-facebook"></i></a>
                                                     </li>
                                                     <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                                                     <li><a href="#"><i class="fa fa-linkedin"
@@ -230,7 +232,7 @@
                             </div>
                         </div>
                         <div class="our-team">
-                            <img src="{{asset('images/team/1.jpg')}}" alt="" />
+                            <img src="{{ asset('images/team/1.jpg') }}" alt="" />
                             <div class="person-details">
                                 <div class="overly-bg"></div>
                                 <a href="team-single.html">
@@ -258,7 +260,8 @@
                                             <td>Fallow us on</td>
                                             <td>
                                                 <ul class="person-social-icons">
-                                                    <li><a href="#" class="active"><i class="fa fa-facebook"></i></a>
+                                                    <li><a href="#" class="active"><i
+                                                                class="fa fa-facebook"></i></a>
                                                     </li>
                                                     <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                                                     <li><a href="#"><i class="fa fa-linkedin"
@@ -308,76 +311,44 @@
                     <div class="row">
                         <div class="col-sm-9">
                             <div class="latest-news-slider">
-                                <div>
-                                    <div class="news-normal-block">
-                                        <div class="news-img">
-                                            <a href="#">
-                                                <img src="{{asset('images/latest/1.jpg')}}" alt="" />
-                                            </a>
-                                        </div>
-                                        <h4 class="news-title"><a href="blog-single.html">TFC Club Score Seven in CL
-                                                Rout Match</a></h4>
-                                        <div class="news-desc">
-                                            <p>
-                                                Blandit rutrum, erat et egestas ultricies, dolor tortor egestas enim,
-                                                quiste rhoncus sem the purus eu sapien curabitur.Lorem Ipsum is
-                                                therefore always free from repetitionetc.
-                                            </p>
-                                        </div>
-                                        <div class="news-btn">
-                                            <a class="primary-btn" href="blog-single.html">Read More</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="news-normal-block">
-                                        <div class="news-img">
-                                            <a href="#">
-                                                <img src="{{asset('images/latest/2.jpg')}}" alt="" />
-                                            </a>
-                                        </div>
-                                        <h4 class="news-title"><a href="#">TFC Club Score Seven in CL Rout Match</a>
-                                        </h4>
-                                        <div class="news-desc">
-                                            <p>
-                                                Blandit rutrum, erat et egestas ultricies, dolor tortor egestas enim,
-                                                quiste rhoncus sem the purus eu sapien curabitur.Lorem Ipsum is
-                                                therefore always free from repetitionetc.
-                                            </p>
-                                        </div>
-                                        <div class="news-btn">
-                                            <a class="primary-btn" href="blog-single.html">Read More</a>
+                                @foreach ($blogposts as $blogpost)
+                                    <div>
+                                        <div class="news-normal-block">
+                                            <div class="news-img">
+                                                <a
+                                                    href="{{ route('blogpost', ['id' => $blogpost->id, 'locale' => Config::get('app.locale')]) }}">
+                                                    <div class="blog-image-place"
+                                                        style="background:url({{ asset('app_images/' . $blogpost->image) }})">
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <h4 class="news-title"><a
+                                                    href="{{ route('blogpost', ['id' => $blogpost->id, 'locale' => Config::get('app.locale')]) }}">{{ \Illuminate\Support\Str::limit($blogpost->title, 20, $end = '...') }}</a>
+                                            </h4>
+                                            <div class="news-desc">
+                                                <p>
+                                                    {{ \Illuminate\Support\Str::limit($blogpost->short_description, 45, $end = '...') }}
+                                                </p>
+                                            </div>
+                                            <div class="news-btn">
+                                                <a class="primary-btn"
+                                                    href="{{ route('blogpost', ['id' => $blogpost->id, 'locale' => Config::get('app.locale')]) }}">Read
+                                                    More</a>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div>
-                                    <div class="news-normal-block">
-                                        <div class="news-img">
-                                            <a href="#">
-                                                <img src="{{asset('images/latest/3.jpg')}}" alt="" />
-                                            </a>
-                                        </div>
-                                        <h4 class="news-title"><a href="blog-single.html">TFC Club Score Seven in CL
-                                                Rout Match</a></h4>
-                                        <div class="news-desc">
-                                            <p>
-                                                Blandit rutrum, erat et egestas ultricies, dolor tortor egestas enim,
-                                                quiste rhoncus sem the purus eu sapien curabitur.Lorem Ipsum is
-                                                therefore always free from repetitionetc.
-                                            </p>
-                                        </div>
-                                        <div class="news-btn">
-                                            <a class="primary-btn" href="blog-single.html">Read More</a>
-                                        </div>
-                                    </div>
-                                </div>
+                                @endforeach
                             </div>
                         </div>
                         <div class="col-sm-3">
                             <div class="latest-news-nav">
-                                <div><img src="{{asset('images/latest/tb1.jpg')}}" alt="" /></div>
-                                <div><img src="{{asset('images/latest/tb2.jpg')}}" alt="" /></div>
-                                <div><img src="{{asset('images/latest/tb3.jpg')}}" alt="" /></div>
+                                @foreach ($blogposts as $blogpost)
+                                    <div>
+                                        <div class="blog-image-place"
+                                            style="background:url({{ asset('app_images/' . $blogpost->image) }})">
+                                        </div>
+                                    </div>
+                                @endforeach
                             </div>
                         </div>
                     </div>
@@ -401,7 +372,7 @@
                 <div class="row">
                     <div class="col-md-3 col-sm-6 col-xs-6">
                         <div class="single-gallery">
-                            <img src="{{asset('images/gallery2/1.jpg')}}" alt="">
+                            <img src="{{ asset('images/gallery2/1.jpg') }}" alt="">
                             <div class="heading-conent">
                                 <ul class="media-icons">
                                     <li><a href="#"><i class="fa fa-instagram"></i></a></li>
@@ -423,7 +394,7 @@
                     </div>
                     <div class="col-md-3 col-sm-6 col-xs-6">
                         <div class="single-gallery">
-                            <img src="{{asset('images/gallery2/2.jpg')}}" alt="">
+                            <img src="{{ asset('images/gallery2/2.jpg') }}" alt="">
                             <div class="heading-conent">
                                 <ul class="media-icons">
                                     <li><a href="#"><i class="fa fa-instagram"></i></a></li>
@@ -445,7 +416,7 @@
                     </div>
                     <div class="col-md-3 col-sm-6 col-xs-6">
                         <div class="single-gallery">
-                            <img src="{{asset('images/gallery2/3.jpg')}}" alt="">
+                            <img src="{{ asset('images/gallery2/3.jpg') }}" alt="">
                             <div class="heading-conent">
                                 <ul class="media-icons">
                                     <li><a href="#"><i class="fa fa-instagram"></i></a></li>
@@ -467,7 +438,7 @@
                     </div>
                     <div class="col-md-3 col-sm-6 col-xs-6">
                         <div class="single-gallery">
-                            <img src="{{asset('images/gallery2/4.jpg')}}" alt="">
+                            <img src="{{ asset('images/gallery2/4.jpg') }}" alt="">
                             <div class="heading-conent">
                                 <ul class="media-icons">
                                     <li><a href="#"><i class="fa fa-instagram"></i></a></li>
@@ -489,7 +460,7 @@
                     </div>
                     <div class="col-md-3 col-sm-6 col-xs-6">
                         <div class="single-gallery">
-                            <img src="{{asset('images/gallery2/5.jpg')}}" alt="">
+                            <img src="{{ asset('images/gallery2/5.jpg') }}" alt="">
                             <div class="heading-conent">
                                 <ul class="media-icons">
                                     <li><a href="#"><i class="fa fa-instagram"></i></a></li>
@@ -511,7 +482,7 @@
                     </div>
                     <div class="col-md-3 col-sm-6 col-xs-6">
                         <div class="single-gallery">
-                            <img src="{{asset('images/gallery2/6.jpg')}}" alt="">
+                            <img src="{{ asset('images/gallery2/6.jpg') }}" alt="">
                             <div class="heading-conent">
                                 <ul class="media-icons">
                                     <li><a href="#"><i class="fa fa-instagram"></i></a></li>
@@ -533,7 +504,7 @@
                     </div>
                     <div class="col-md-3 col-sm-6 col-xs-6">
                         <div class="single-gallery">
-                            <img src="{{asset('images/gallery2/7.jpg')}}" alt="">
+                            <img src="{{ asset('images/gallery2/7.jpg') }}" alt="">
                             <div class="heading-conent">
                                 <ul class="media-icons">
                                     <li><a href="#"><i class="fa fa-instagram"></i></a></li>
@@ -555,7 +526,7 @@
                     </div>
                     <div class="col-md-3 col-sm-6 col-xs-6">
                         <div class="single-gallery">
-                            <img src="{{asset('images/gallery2/8.jpg')}}" alt="">
+                            <img src="{{ asset('images/gallery2/8.jpg') }}" alt="">
                             <div class="heading-conent">
                                 <ul class="media-icons">
                                     <li><a href="#"><i class="fa fa-instagram"></i></a></li>
@@ -596,7 +567,7 @@
                         data-md-device-nav="false" data-md-device-dots="false">
                         <div class="testimonial">
                             <div class="testimonial-profile">
-                                <a href="#"><img src="{{asset('images/testimonial/tom.jpg')}}" alt="tom"></a>
+                                <a href="#"><img src="{{ asset('images/testimonial/tom.jpg') }}" alt="tom"></a>
                             </div>
                             <div class="testimonial-content">
                                 <h3 class="testimonial-title">Tom Williamson</h3>
@@ -616,7 +587,7 @@
                         </div>
                         <div class="testimonial">
                             <div class="testimonial-profile">
-                                <a href="#"><img src="{{asset('images/testimonial/peter.jpg')}}" alt=""></a>
+                                <a href="#"><img src="{{ asset('images/testimonial/peter.jpg') }}" alt=""></a>
                             </div>
                             <div class="testimonial-content">
                                 <h3 class="testimonial-title">William Peter</h3>
@@ -636,7 +607,7 @@
                         </div>
                         <div class="testimonial">
                             <div class="testimonial-profile">
-                                <a href="#"><img src="{{asset('images/testimonial/lan.jpg')}}" alt="Ian"></a>
+                                <a href="#"><img src="{{ asset('images/testimonial/lan.jpg') }}" alt="Ian"></a>
                             </div>
                             <div class="testimonial-content">
                                 <h3 class="testimonial-title">Ian Kristian</h3>
@@ -673,23 +644,23 @@
                 data-md-device-dots="false">
                 <div class="item">
                     <div class="single-logo">
-                        <a href="#"><img src="{{asset('images/logo/1.png')}}" alt=""></a>
+                        <a href="#"><img src="{{ asset('images/logo/1.png') }}" alt=""></a>
                     </div>
                 </div>
                 <div class="item">
                     <div class="single-logo">
-                        <a href="#"><img src="{{asset('images/logo/2.png')}}" alt=""></a>
+                        <a href="#"><img src="{{ asset('images/logo/2.png') }}" alt=""></a>
                     </div>
                 </div>
 
                 <div class="item">
                     <div class="single-logo">
-                        <a href="#"><img src="{{asset('images/logo/3.png')}}" alt=""></a>
+                        <a href="#"><img src="{{ asset('images/logo/3.png') }}" alt=""></a>
                     </div>
                 </div>
                 <div class="item">
                     <div class="single-logo">
-                        <a href="#"><img src="{{asset('images/logo/4.png')}}" alt=""></a>
+                        <a href="#"><img src="{{ asset('images/logo/4.png') }}" alt=""></a>
                     </div>
                 </div>
             </div>
@@ -709,33 +680,33 @@
 
     <!-- all js here -->
     <!-- jquery latest version -->
-    <script src="{{asset('js/jquery.min.js')}}"></script>
+    <script src="{{ asset('js/jquery.min.js') }}"></script>
     <!-- Menu js -->
-    <script src="{{asset('js/rsmenu-main.js')}}"></script>
+    <script src="{{ asset('js/rsmenu-main.js') }}"></script>
     <!-- jquery-ui js -->
-    <script src="{{asset('js/jquery-ui.min.js')}}"></script>
+    <script src="{{ asset('js/jquery-ui.min.js') }}"></script>
     <!-- bootstrap js -->
-    <script src="{{asset('js/bootstrap.min.js')}}"></script>
+    <script src="{{ asset('js/bootstrap.min.js') }}"></script>
     <!-- meanmenu js -->
-    <script src="{{asset('js/jquery.meanmenu.js')}}"></script>
+    <script src="{{ asset('js/jquery.meanmenu.js') }}"></script>
     <!-- wow js -->
-    <script src="{{asset('js/wow.min.js')}}"></script>
+    <script src="{{ asset('js/wow.min.js') }}"></script>
     <!-- Flexslider js -->
-    <script src="{{asset('js/jquery.flexslider-min.js')}}"></script>
+    <script src="{{ asset('js/jquery.flexslider-min.js') }}"></script>
     <!-- Slick js -->
-    <script src="{{asset('js/slick.min.js')}}"></script>
+    <script src="{{ asset('js/slick.min.js') }}"></script>
     <!-- masonry js -->
-    <script src="{{asset('js/masonry.js')}}"></script>
+    <script src="{{ asset('js/masonry.js') }}"></script>
     <!-- magnific-popup js -->
     <!-- owl.carousel js -->
-    <script src="{{asset('js/owl.carousel.min.js')}}"></script>
+    <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
     <!-- magnific-popup js -->
-    <script src="{{asset('js/jquery.magnific-popup.js')}}"></script>
+    <script src="{{ asset('js/jquery.magnific-popup.js') }}"></script>
     <!-- jquery.counterup js -->
-    <script src="{{asset('js/jquery.counterup.min.js')}}"></script>
-    <script src="{{asset('js/waypoints.min.js')}}"></script>
+    <script src="{{ asset('js/jquery.counterup.min.js') }}"></script>
+    <script src="{{ asset('js/waypoints.min.js') }}"></script>
     <!-- main js -->
-    <script src="{{asset('js/main.js')}}"></script>
+    <script src="{{ asset('js/main.js') }}"></script>
 </body>
 
 </html>

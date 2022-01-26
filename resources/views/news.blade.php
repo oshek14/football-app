@@ -95,7 +95,7 @@
                                     </a>
                                 </h3>
                                 <p>
-                                    {{ \Illuminate\Support\Str::limit($blogpost->short_description, 70, $end='...') }}
+                                    {{ \Illuminate\Support\Str::limit($blogpost->short_description, 50, $end='...') }}
                                 </p>
                                 <div class="read-more">
                                     <a

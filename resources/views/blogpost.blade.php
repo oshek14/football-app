@@ -115,66 +115,33 @@
                         <div class="recent-post-area">
                             <span class="title"> Recent Post</span>
                             <ul class="news-post">
-                                <li>
-                                    <div class="row">
-                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 content">
-                                            <div class="item-post">
-                                                <div class="row">
-                                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 paddimg-right-none">
-                                                        <img src="{{ asset('images/blog-details/sm1.jpg') }}" alt=""
-                                                            title="News image" />
-                                                    </div>
-                                                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
-                                                        <h4><a href="blog-single.html">Raken develops The software</a>
-                                                        </h4>
-                                                        <span class="date"><i class="fa fa-calendar"
-                                                                aria-hidden="true"></i> June 28, 2017</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="row">
-                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 content">
-                                            <div class="item-post">
-                                                <div class="row">
-                                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 paddimg-right-none">
-                                                        <img src="{{ asset('images/blog-details/sm2.jpg') }}" alt=""
-                                                            title="News image" />
-                                                    </div>
-                                                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
-                                                        <h4><a href="blog-single.html">TRaken develops The software</a>
-                                                        </h4>
-                                                        <span class="date"><i class="fa fa-calendar"
-                                                                aria-hidden="true"></i> June 28, 2017</span>
+
+                                @foreach ($blogposts as $blogpost)
+                                    <li>
+                                        <div class="row">
+                                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 content">
+                                                <div class="item-post">
+                                                    <div class="row">
+                                                        <div
+                                                            class="col-lg-12 col-md-12 col-sm-4 col-xs-4 paddimg-right-none">
+                                                            <div class="blog-image-place"
+                                                                style="background:url({{ asset('app_images/' . $blogpost->image) }})">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                                                            <h4><a
+                                                                    href="{{ route('blogpost', ['id' => $blogpost->id, 'locale' => Config::get('app.locale')]) }}">{{ \Illuminate\Support\Str::limit($blogpost->title, 20, $end = '...') }}</a>
+                                                            </h4>
+                                                            <span class="date"><i class="fa fa-calendar"
+                                                                    aria-hidden="true"></i>{{ \Carbon\Carbon::parse($blogpost->created_at)->format('d/m/Y') }}</span>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="row">
-                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 content">
-                                            <div class="item-post">
-                                                <div class="row">
-                                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 paddimg-right-none">
-                                                        <img src="{{ asset('images/blog-details/sm3.jpg') }}" alt=""
-                                                            title="News image" />
-                                                    </div>
-                                                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
-                                                        <h4><a href="blog-single.html">Raken develops The software</a>
-                                                        </h4>
-                                                        <span class="date"><i class="fa fa-calendar"
-                                                                aria-hidden="true"></i> June 28, 2017</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
+                                    </li>
+                                @endforeach
+
                             </ul>
                         </div>
                     </div>

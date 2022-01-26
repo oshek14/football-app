@@ -9,9 +9,8 @@ class NewsController extends Controller
 {
     public function index()
     {
-        $blogposts = BlogPost::all();
         return view('news', [
-            'blogposts' => DB::table('blog_posts')->paginate(12)
+            'blogposts' => DB::table('blog_posts')->orderBy('created_at', 'desc')->paginate(12)
         ]);
     }
 }

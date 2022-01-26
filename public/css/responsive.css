@@ -112,7 +112,7 @@
         font-size: 15px;
     }
     .rs-blog .single-blog-slide{
-        min-height: 470px;
+        /* min-height: 380px; */
     }
     .slider-main.slider-section4 .slider-text h1 {
         font-size: 45px;
@@ -638,7 +638,7 @@
         margin-bottom: 10px;
     }
     .rs-blog .single-blog-slide {
-        min-height: 510px;
+        /* min-height: 430px; */
     }
     .menu-sticky.sticky{
         position: static !important;

@@ -5052,10 +5052,11 @@ body .modal-backdrop {
 }
 
 .rs-blog .single-blog-slide {
-    min-height: 506px;
+    /* min-height: 420px; */
     position: relative;
     overflow: hidden;
     margin-bottom: 30px;
+    box-shadow: 2px 4px 5px rgb(211, 211, 211);
 }
 
 .rs-blog .single-blog-slide .images {
@@ -5073,6 +5074,7 @@ body .modal-backdrop {
 
 .rs-blog .single-blog-slide .blog-details {
     margin: 10px 0 0;
+    padding: 0 15px 20px 15px;
 }
 
 .rs-blog .single-blog-slide .blog-details span.date {
@@ -5099,6 +5101,8 @@ body .modal-backdrop {
 .rs-blog .single-blog-slide .blog-details p {
     margin-bottom: 15px;
     color: #111111;
+    height: 75px;
+    overflow: hidden;
 }
 
 .rs-blog .single-blog-slide .blog-details .read-more {
@@ -7342,11 +7346,15 @@ body .modal-backdrop {
     justify-content: space-between;
     width: 100%;
     margin-bottom: 10px;
+    height: 100px;
+    position: relative;
 }
 
 .blog-list .title-and-image {
     display: flex;
     align-items: center;
+    position: relative;
+    max-height: 100px;
     width: 100%;
 }
 
@@ -7370,13 +7378,25 @@ body .modal-backdrop {
 
 .blog-list .title {
     padding: 0 20px;
+    max-height: 100px;
+    overflow: hidden;
 }
 
-.blogspots-scroll-container {
+.blogposts-scroll-container {
     height: 650px;
     overflow-y: scroll;
 }
 
+.no-margin {
+    margin: 0 !important;
+}
+.no-padding {
+    padding: 0 !important;
+}
+
+.item-post {
+    overflow: hidden;
+}
 @keyframes preloader {
     0% {
         opacity: 1;

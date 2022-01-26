@@ -44,6 +44,8 @@ Route::group(['prefix' => 'admin'], function () {
     Route::get('/', 'App\Http\Controllers\Admin\DashboardController@index')->name('adminDashboard')->middleware('auth');
     Route::get('/logout', 'App\Http\Controllers\Admin\AuthController@getLogout')->name('getLogout')->middleware('auth');
     Route::post('/blogpost','App\Http\Controllers\Admin\BlogPostController@store')->name('blogpost.store');
+    Route::put('/blogpost/update','App\Http\Controllers\Admin\BlogPostController@update')->name('blogpost.update');
     Route::get('/blogposts','App\Http\Controllers\Admin\BlogPostController@index')->name('blogposts.index');
-    Route::delete('/blogspot/{id}','App\Http\Controllers\Admin\BlogPostController@destroy')->name('blogpost.destroy');
+    Route::get('/blogpost/edit/{id}','App\Http\Controllers\Admin\BlogPostController@show')->name('blogposts.edit');
+    Route::delete('/blogpost/{id}','App\Http\Controllers\Admin\BlogPostController@destroy')->name('blogpost.destroy');
 });

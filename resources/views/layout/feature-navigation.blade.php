@@ -50,10 +50,10 @@
                         </ul>
                     </nav>
                     <!--Header Search Start  here-->
-                    <div class="search">
+                    {{-- <div class="search">
                         <a class="rs-search" data-target=".search-modal" data-toggle="modal" href="#"><i
                                 class="fa fa-search"></i></a>
-                    </div>
+                    </div> --}}
                     <!--Header Search End  here-->
                 </div>
             </div>
