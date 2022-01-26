@@ -102,7 +102,7 @@
                                             @csrf
                                         </form>&nbsp;&nbsp;
                                         <form action="{{ url('/admin/blogpost/' . $blogpost->id) }}" method="POST">
-                                            <input class="btn btn-danger" type="submit" value="Delete" />
+                                            <input onclick="return confirm('Are you sure?')" class="btn btn-danger" type="submit" value="Delete" />
                                             @method('delete')
                                             @csrf
                                         </form>&nbsp;&nbsp;
