@@ -2,10 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Club;
+
 class ContactController extends Controller
 {
     public function index()
     {
-        return view('contact');
+        $clubs = Club::orderBy('created_at', 'desc')->get();
+
+        return view('contact', [
+            'clubs' => $clubs,
+        ]);
     }
 }

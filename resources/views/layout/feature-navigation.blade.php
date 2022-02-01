@@ -24,15 +24,11 @@
                                 class="{{ Request::routeIs('club') ? 'current_page_item' : '' }}">
                                 <a href="#">Clubs</a>
                                 <ul class="sub-menu">
-                                    <li class="{{ isset($id) && $id == 1 ? 'current_page_item' : '' }}"><a
-                                            href="{{ route('club', [ 'id' => '1', 'locale' => Config::get('app.locale')]) }}">Club
-                                            1</a></li>
-                                    <li class="{{ isset($id) && $id == 2 ? 'current_page_item' : '' }}"><a
-                                            href="{{ route('club', [ 'id' => '2', 'locale' => Config::get('app.locale')]) }}">Club
-                                            2</a></li>
-                                    <li class="{{ isset($id) && $id == 3 ? 'current_page_item' : '' }}"><a
-                                            href="{{ route('club', [ 'id' => '3', 'locale' => Config::get('app.locale')]) }}">Club
-                                            3</a></li>
+                                    @foreach ($clubs as $club)
+                                        <li class="{{ isset($club_id) && $club_id == $club->id ? 'current_page_item' : '' }}"><a
+                                                href="{{ route('club', ['id' => $club->id, 'locale' => Config::get('app.locale')]) }}">
+                                                {{ $club->name }}</a></li>
+                                    @endforeach
                                 </ul>
                             </li>
                             <!-- Drop Down -->

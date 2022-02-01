@@ -43,9 +43,15 @@ Route::group(['prefix' => 'admin'], function () {
     Route::post('/login', 'App\Http\Controllers\Admin\AuthController@postLogin')->name('postLogin');
     Route::get('/', 'App\Http\Controllers\Admin\DashboardController@index')->name('adminDashboard')->middleware('auth');
     Route::get('/logout', 'App\Http\Controllers\Admin\AuthController@getLogout')->name('getLogout')->middleware('auth');
-    Route::post('/blogpost','App\Http\Controllers\Admin\BlogPostController@store')->name('blogpost.store');
-    Route::put('/blogpost/update','App\Http\Controllers\Admin\BlogPostController@update')->name('blogpost.update');
-    Route::get('/blogposts','App\Http\Controllers\Admin\BlogPostController@index')->name('blogposts.index');
-    Route::get('/blogpost/edit/{id}','App\Http\Controllers\Admin\BlogPostController@show')->name('blogposts.edit');
-    Route::delete('/blogpost/{id}','App\Http\Controllers\Admin\BlogPostController@destroy')->name('blogpost.destroy');
+    Route::get('/blogposts','App\Http\Controllers\Admin\BlogPostController@index')->name('blogposts.index')->middleware('auth');
+    Route::post('/blogpost','App\Http\Controllers\Admin\BlogPostController@store')->name('blogpost.store')->middleware('auth');
+    Route::put('/blogpost/update','App\Http\Controllers\Admin\BlogPostController@update')->name('blogpost.update')->middleware('auth');
+    Route::get('/blogpost/edit/{id}','App\Http\Controllers\Admin\BlogPostController@show')->name('blogposts.edit')->middleware('auth');
+    Route::delete('/blogpost/{id}','App\Http\Controllers\Admin\BlogPostController@destroy')->name('blogpost.destroy')->middleware('auth');
+
+    Route::get('/clubs','App\Http\Controllers\Admin\ClubController@index')->name('clubs.index')->middleware('auth');
+    Route::post('/club','App\Http\Controllers\Admin\ClubController@store')->name('club.store')->middleware('auth');
+    Route::put('/club/update','App\Http\Controllers\Admin\ClubController@update')->name('club.update')->middleware('auth');
+    Route::get('/club/edit/{id}','App\Http\Controllers\Admin\ClubController@show')->name('clubs.edit')->middleware('auth');
+    Route::delete('/club/{id}','App\Http\Controllers\Admin\ClubController@destroy')->name('club.destroy')->middleware('auth');
 });

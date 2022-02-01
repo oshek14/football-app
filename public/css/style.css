@@ -7382,7 +7382,94 @@ body .modal-backdrop {
     overflow: hidden;
 }
 
-.blogposts-scroll-container {
+.club-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 10px;
+    height: 100px;
+    position: relative;
+}
+
+.club-list .title-and-image {
+    display: flex;
+    align-items: center;
+    position: relative;
+    max-height: 100px;
+    width: 100%;
+}
+
+.club-list  h5 {
+    margin-bottom: 5px;
+}
+
+.club-list  p {
+    margin: 0 !important;
+}
+
+.club-list .image {
+    width: 150px;
+    height: 100px;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    position: relative !important;
+    flex-shrink: 0;
+}
+
+.club-list .title {
+    padding: 0 20px;
+    max-height: 100px;
+    overflow: hidden;
+}
+
+.player-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 10px;
+    height: 100px;
+    position: relative;
+}
+
+.player-list .title-and-image {
+    display: flex;
+    align-items: center;
+    position: relative;
+    max-height: 100px;
+    width: 100%;
+}
+
+.player-list  h5 {
+    margin-bottom: 5px;
+}
+
+.player-list  p {
+    margin: 0 !important;
+}
+
+.player-list .image {
+    width: 150px;
+    height: 100px;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    position: relative !important;
+    flex-shrink: 0;
+}
+
+.player-list .title {
+    padding: 0 20px;
+    max-height: 100px;
+    overflow: hidden;
+}
+
+.blogposts-scroll-container,
+.players-scroll-container
+.clubs-scroll-container
+ {
     height: 650px;
     overflow-y: scroll;
 }

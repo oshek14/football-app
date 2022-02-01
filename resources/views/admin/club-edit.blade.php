@@ -40,45 +40,41 @@
             <!-- MAIN CONTENT -->
             <div class="main-content">
                 <div class="container-fluid">
-                    <div class="blogpost-form-wrapper">
-                        <div class="blogpost-form-container">
-                            <h2>Edit blog post</h2>
-                            @if (session()->get('updateblogPostStatus') === 1)
+                    <div class="club-form-wrapper">
+                        <div class="club-form-container">
+                            <h2>Edit club</h2>
+                            @if (session()->get('updateClubStatus') === 1)
                                 <div class="alert alert-success alert-dismissible" role="alert">
                                     <button type="button" class="close" data-dismiss="alert"
                                         aria-label="Close"><span aria-hidden="true">×</span></button>
-                                    <i class="fa fa-check-circle"></i> Blog post updated succesfully
+                                    <i class="fa fa-check-circle"></i> Club updated succesfully
                                 </div>
                             @endif
-                            @if (session()->get('updateblogPostStatus') === 0)
+                            @if (session()->get('updateClubStatus') === 0)
                                 <div class="alert alert-danger alert-dismissible" role="alert">
                                     <button type="button" class="close" data-dismiss="alert"
                                         aria-label="Close"><span aria-hidden="true">×</span></button>
                                     <i class="fa fa-times-circle"></i> Something went wrong
                                 </div>
                             @endif
-                            <form class="image-upload" method="POST" action="{{ route('blogpost.update') }}"
+                            <form class="image-upload" method="POST" action="{{ route('club.update') }}"
                                 enctype="multipart/form-data">
                                 @csrf
                                 @method('put')
                                 <div class="form-group">
-                                    <label>Title</label>
-                                    <input type="text" name="title" class="form-control" required value="{{$blogpost->title}}" />
+                                    <label>Name</label>
+                                    <input type="text" name="name" class="form-control" required value="{{$club->name}}" />
                                 </div>
                                 <div class="form-group">
-                                    <label>Short Description</label>
-                                    <input type="text" name="short_description" class="form-control" required value="{{$blogpost->short_description}}" />
-                                </div>
-                                <div class="form-group">
-                                    <label>Image</label>
-                                    <input type="file" name="image" class="form-control" required value="{{$blogpost->image}}" />
+                                    <label>Logo</label>
+                                    <input type="file" name="logo" class="form-control" required value="{{$club->logo}}" />
                                 </div>
                                 <div class="form-group">
                                     <label>Description</label>
                                     <textarea name="description" class="textarea"
-                                        style="width: 100%; height: 250px">{{$blogpost->description}}</textarea>
+                                        style="width: 100%; height: 250px">{{$club->description}}</textarea>
                                 </div>
-                                <input type="hidden" name="id" class="form-control" value="{{$blogpost->id}}" />
+                                <input type="hidden" name="id" class="form-control" value="{{$club->id}}" />
                                 <div class="form-group text-center">
                                     <button type="submit" class="btn btn-primary btn-block">Update</button>
                                 </div>

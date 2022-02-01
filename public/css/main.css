@@ -2649,15 +2649,23 @@ ul.activity-timeline>li:last-child:after {
   vertical-align: middle !important;
 }
 
-.blogpost-form-wrapper {
+.blogpost-form-wrapper,
+.club-form-wrapper,
+.player-form-wrapper
+ {
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
 
-.blogpost-form-container {
+.blogpost-form-container,
+.player-form-container,
+.club-form-container
+ {
     padding: 0 20px;
 }
 
-.blogpost-blogs-container {
+.blogpost-blogs-container,
+.players-container,
+.clubs-container {
     padding: 0 20px;
 }
