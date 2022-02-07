@@ -19,16 +19,25 @@ class ClubsSeeder extends Seeder
             'name' => 'First Club',
             'logo' => 'club1.png',
             'description' => 'First club description',
+            'manager' => 'Manager name',
+            'coach' => 'Coach name',
+            'location' => 'Tbilisi',
         ]);
         DB::table('clubs')->insert([
             'name' => 'Second Club',
             'logo' => 'club2.png',
             'description' => 'Second club description',
+            'manager' => 'Manager name',
+            'coach' => 'Coach name',
+            'location' => 'Tbilisi',
         ]);
         DB::table('clubs')->insert([
             'name' => 'Third Club',
             'logo' => 'club3.png',
             'description' => 'Third club description',
+            'manager' => 'Manager name',
+            'coach' => 'Coach name',
+            'location' => 'Tbilisi',
         ]);
     }
 }

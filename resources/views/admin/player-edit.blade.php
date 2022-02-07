@@ -40,53 +40,52 @@
             <!-- MAIN CONTENT -->
             <div class="main-content">
                 <div class="container-fluid">
-                    <div class="club-form-wrapper">
-                        <div class="club-form-container">
-                            <h2>Edit club</h2>
-                            @if (session()->get('updateClubStatus') === 1)
+                    <div class="player-form-wrapper">
+                        <div class="player-form-container">
+                            <h2>Edit player</h2>
+                            @if (session()->get('updatePlayerStatus') === 1)
                                 <div class="alert alert-success alert-dismissible" role="alert">
                                     <button type="button" class="close" data-dismiss="alert"
                                         aria-label="Close"><span aria-hidden="true">×</span></button>
-                                    <i class="fa fa-check-circle"></i> Club updated succesfully
+                                    <i class="fa fa-check-circle"></i> Player updated succesfully
                                 </div>
                             @endif
-                            @if (session()->get('updateClubStatus') === 0)
+                            @if (session()->get('updatePlayerStatus') === 0)
                                 <div class="alert alert-danger alert-dismissible" role="alert">
                                     <button type="button" class="close" data-dismiss="alert"
                                         aria-label="Close"><span aria-hidden="true">×</span></button>
                                     <i class="fa fa-times-circle"></i> Something went wrong
                                 </div>
                             @endif
-                            <form class="image-upload" method="POST" action="{{ route('club.update') }}"
+                            <form class="image-upload" method="POST" action="{{ route('player.update') }}"
                                 enctype="multipart/form-data">
                                 @csrf
                                 @method('put')
                                 <div class="form-group">
                                     <label>Name</label>
-                                    <input type="text" name="name" class="form-control" required value="{{$club->name}}" />
+                                    <input type="text" name="name" class="form-control" required value="{{$player->name}}" />
+                                </div>
+                                <label>Club</label>
+                                <select class="form-control" name="club_id" id="club_id">
+                                    @foreach ($clubs as $club)
+                                    @if($club->id == $player->club_id)
+                                        <option selected value="{{$club->id}}">{{$club->name}}</option>
+                                    @else
+                                        <option value="{{$club->id}}">{{$club->name}}</option>
+                                    @endif
+                                    @endforeach
+                                </select>
+                                <br>
+                                <div class="form-group">
+                                    <label>Image</label>
+                                    <input type="file" name="image" class="form-control" required value="{{$player->image}}" />
                                 </div>
                                 <div class="form-group">
-                                    <label>Logo</label>
-                                    <input type="file" name="logo" class="form-control" required value="{{$club->logo}}" />
+                                    <label>Designation</label>
+                                    <textarea name="designation" class="textarea"
+                                        style="width: 100%; height: 250px">{{$player->designation}}</textarea>
                                 </div>
-                                <div class="form-group">
-                                    <label>Manager</label>
-                                    <input type="text" name="manager" class="form-control" required value="{{$club->manager}}" />
-                                </div>
-                                <div class="form-group">
-                                    <label>Location</label>
-                                    <input type="text" name="location" class="form-control" required value="{{$club->location}}" />
-                                </div>
-                                <div class="form-group">
-                                    <label>Coach</label>
-                                    <input type="text" name="coach" class="form-control" required value="{{$club->coach}}" />
-                                </div>
-                                <div class="form-group">
-                                    <label>Description</label>
-                                    <textarea name="description" class="textarea"
-                                        style="width: 100%; height: 250px">{{$club->description}}</textarea>
-                                </div>
-                                <input type="hidden" name="id" class="form-control" value="{{$club->id}}" />
+                                <input type="hidden" name="id" class="form-control" value="{{$player->id}}" />
                                 <div class="form-group text-center">
                                     <button type="submit" class="btn btn-primary btn-block">Update</button>
                                 </div>

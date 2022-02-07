@@ -54,4 +54,10 @@ Route::group(['prefix' => 'admin'], function () {
     Route::put('/club/update','App\Http\Controllers\Admin\ClubController@update')->name('club.update')->middleware('auth');
     Route::get('/club/edit/{id}','App\Http\Controllers\Admin\ClubController@show')->name('clubs.edit')->middleware('auth');
     Route::delete('/club/{id}','App\Http\Controllers\Admin\ClubController@destroy')->name('club.destroy')->middleware('auth');
+
+    Route::get('/players','App\Http\Controllers\Admin\PlayerController@index')->name('players.index')->middleware('auth');
+    Route::post('/player','App\Http\Controllers\Admin\PlayerController@store')->name('player.store')->middleware('auth');
+    Route::put('/player/update','App\Http\Controllers\Admin\PlayerController@update')->name('player.update')->middleware('auth');
+    Route::get('/player/edit/{id}','App\Http\Controllers\Admin\PlayerController@show')->name('players.edit')->middleware('auth');
+    Route::delete('/player/{id}','App\Http\Controllers\Admin\PlayerController@destroy')->name('player.destroy')->middleware('auth');
 });

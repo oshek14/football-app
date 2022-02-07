@@ -34,6 +34,9 @@ class ClubController extends Controller
         $club = new Club;
         $club->name = $request->name;
         $club->description = $request->description;
+        $club->manager = $request->manager;
+        $club->coach = $request->coach;
+        $club->location = $request->location;
         $club->logo = $request->logo;
         $club->logo = $fileName;
         if ($club->save()) {
@@ -63,6 +66,9 @@ class ClubController extends Controller
 
         $club->name = $request->name;
         $club->description = $request->description;
+        $club->manager = $request->manager;
+        $club->coach = $request->coach;
+        $club->location = $request->location;
         $club->logo = $request->logo;
         $club->logo = $fileName;
         if ($club->save()) {

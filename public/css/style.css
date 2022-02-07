@@ -7336,6 +7336,16 @@ body .modal-backdrop {
     transition: all .3s ease-in-out;
 }
 
+.club-image-place {
+    width: 100%;
+    padding-bottom: 120%;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    position: relative !important;
+    transition: all .3s ease-in-out;
+}
+
 .single-blog-slide:hover .blog-image-place{
     transform: scale(1.1);
 }

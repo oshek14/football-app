@@ -7,31 +7,31 @@
     <title>Soccer | Real Banani</title>
     <meta name="description" content="">
     <meta name="viewport" content="widtd=device-widtd, initial-scale=1">
-    <link rel="apple-touch-icon" href="{{asset('apple-touch-icon.png')}}">
+    <link rel="apple-touch-icon" href="{{ asset('apple-touch-icon.png') }}">
     <!-- Place favicon.ico in tde root directory -->
-    <link rel="shortcut icon" type="image/x-icon" href="{{asset('images/fav.png')}}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('images/fav.png') }}">
     <!-- bootstrap v3.3.6 css -->
-    <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
     <!-- font-awesome css -->
-    <link rel="stylesheet" href="{{asset('css/font-awesome.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/font-awesome.min.css') }}">
     <!-- animate css -->
-    <link rel="stylesheet" href="{{asset('css/animate.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/animate.css') }}">
     <!-- Main Menu css -->
-    <link rel="stylesheet" href="{{asset('css/rsmenu-main.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/rsmenu-main.css') }}">
     <!-- rsmenu transitions css -->
-    <link rel="stylesheet" href="{{asset('css/rsmenu-transitions.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/rsmenu-transitions.css') }}">
     <!-- hover-min css -->
-    <link rel="stylesheet" href="{{asset('css/hover-min.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/hover-min.css') }}">
     <!-- magnific-popup css -->
-    <link rel="stylesheet" href="{{asset('css/magnific-popup.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/magnific-popup.css') }}">
     <!-- owl.carousel css -->
-    <link rel="stylesheet" href="{{asset('css/owl.carousel.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/owl.carousel.css') }}">
     <!-- style css -->
-    <link rel="stylesheet" href="{{asset('css/style.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <!-- responsive css -->
-    <link rel="stylesheet" href="{{asset('css/responsive.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/responsive.css') }}">
     <!-- modernizr js -->
-    <script src="{{asset('js/modernizr-2.8.3.min.js')}}"></script>
+    <script src="{{ asset('js/modernizr-2.8.3.min.js') }}"></script>
 </head>
 
 <body class="home-two">
@@ -49,17 +49,17 @@
 
     <!-- Breadcrumbs Section Start -->
     <div class="rs-breadcrumbs sec-color">
-        <img src="{{asset('images/breadcrumbs/chelsea.jpg')}}" alt="Breadcrubs" />
+        <img src="{{ asset('images/breadcrumbs/chelsea.jpg') }}" alt="Breadcrubs" />
         <div class="breadcrumbs-inner">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 text-center">
-                        <h1 class="page-title">Banani FC</h1>
+                        <h1 class="page-title">{{$club->name}}</h1>
                         <ul>
                             <li>
                                 <a class="active" href="index.html">Home</a>
                             </li>
-                            <li>Banani FC</li>
+                            <li>{{$club->name}}</li>
                         </ul>
                     </div>
                 </div>
@@ -76,95 +76,48 @@
                 <div class="col-md-2 col-sm-3">
                     <div class="club-sidebar-top">
                         <div class="club-logo">
-                            <img src="{{asset('images/upcoming/2.png')}}" alt="logo">
-                            <div class="club-name">
-                                <h2 class="title-bg">Banani FC</h2>
+                            <div class="image club-image-place"
+                                style="background:url({{ asset('app_images/' . $club->logo) }})">
+                            </div>
+                            <div class="club-name" style="text-align: center">
+                                <h2 class="title-bg">{{$club->name}}</h2>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-10 col-sm-9">
+                    <div class="row">
+                        <div class="rs-count" style="padding: 15px">
+                            <h3 class="title-bg">Club History</h3>
+                            <p>{{$club->description}}</p>
+                        </div>
+                    </div>
                     <div class="club-sidebar">
                         <div class="club-details">
-                            <ul class="spsoccer-team-info-list spsoccer-ul-list">
+                            <ul class="spsoccer-team-info-list spsoccer-ul-list" style="text-align: left">
                                 <li>
-                                    <strong>Former President</strong>
-                                    <span>Arturo Vidal</span>
+                                    <strong>Manager</strong>
+                                    <span>{{$club->manager}}</span>
                                 </li>
                                 <li>
-                                    <strong>Manager Name</strong>
-                                    <span>Mahabub Alam</span>
-                                </li>
-                                <li>
-                                    <strong>Past Coach </strong>
-                                    <span>Abdur Roshid</span>
-                                </li>
-                                <li>
-                                    <strong>Current Coach </strong>
-                                    <span>Masud Rana</span>
+                                    <strong>Coach </strong>
+                                    <span>{{$club->coach}}</span>
                                 </li>
                                 <li>
                                     <strong>Location</strong>
-                                    <span>spain</span>
+                                    <span>{{$club->location}}</span>
                                 </li>
                             </ul>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="rs-count">
-
-                            <!-- COUNTER-LIST START -->
-                            <div class="col-lg-3 col-md-3 col-sm-6">
-                                <div class="rs-counter-list">
-                                    <h2 class="rs-counter percent">950</h2>
-                                    <h3>Established in</h3>
-                                </div>
-                            </div>
-                            <!-- COUNTER-LIST END -->
-
-                            <!-- COUNTER-LIST START -->
-                            <div class="col-lg-3 col-md-3 col-sm-6">
-                                <div class="rs-counter-list">
-                                    <h2 class="rs-counter percent">1840</h2>
-                                    <h3>Champions</h3>
-                                </div>
-                            </div>
-                            <!-- COUNTER-LIST END -->
-
-                            <!-- COUNTER-LIST START -->
-                            <div class="col-lg-3 col-md-3 col-sm-6">
-                                <div class="rs-counter-list">
-                                    <h2 class="rs-counter">350</h2>
-                                    <h3>Current Players</h3>
-                                </div>
-                            </div>
-                            <!-- COUNTER-LIST END -->
-
-                            <!-- COUNTER-LIST START -->
-                            <div class="col-lg-3 col-md-3 col-sm-6">
-                                <div class="rs-counter-list">
-                                    <h2 class="rs-counter">400</h2>
-                                    <h3>Top Players</h3>
-                                </div>
-                            </div>
-                            <!-- COUNTER-LIST END -->
                         </div>
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-sm-12">
-                    <h3 class="title-bg">Club History</h3>
-                    <p>It is a long established fact that a reader will be distracted by the readable content of a page
-                        when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal
-                        distribution of letters, as opposed to using 'Content here, content here', making it look like
-                        readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as
-                        their default model text, and a search for 'lorem ipsum' will uncover many web sites still in
-                        their infancy.</p>
                     <ul class="point-menu">
                         <li class="active"><a data-toggle="tab" href="#squad-list">Players</a></li>
                         {{-- <li><a data-toggle="tab" href="#champion">Champion</a></li> --}}
-                        <li><a data-toggle="tab" href="#gallery">Gallery</a></li>
+                        {{-- <li><a data-toggle="tab" href="#gallery">Gallery</a></li> --}}
                         {{-- <li><a data-toggle="tab" href="#jersy">Jersy</a></li> --}}
                     </ul>
                     <div class="tab-content">
@@ -186,7 +139,7 @@
                                 </div>
                                 <div class="list-item">
                                     <div class="image">
-                                        <img src="{{asset('images/team/5.jpg')}}" alt="">
+                                        <img src="{{ asset('images/team/5.jpg') }}" alt="">
                                     </div>
                                     <div class="list-text">
                                         <div class="name">
@@ -200,7 +153,7 @@
                                 </div>
                                 <div class="list-item">
                                     <div class="image">
-                                        <img src="{{asset('images/team/6.jpg')}}" alt="">
+                                        <img src="{{ asset('images/team/6.jpg') }}" alt="">
                                     </div>
                                     <div class="list-text">
                                         <div class="name">
@@ -214,7 +167,7 @@
                                 </div>
                                 <div class="list-item">
                                     <div class="image">
-                                        <img src="{{asset('images/team/7.jpg')}}" alt="">
+                                        <img src="{{ asset('images/team/7.jpg') }}" alt="">
                                     </div>
                                     <div class="list-text">
                                         <div class="name">
@@ -228,7 +181,7 @@
                                 </div>
                                 <div class="list-item">
                                     <div class="image">
-                                        <img src="{{asset('images/team/8.jpg')}}" alt="">
+                                        <img src="{{ asset('images/team/8.jpg') }}" alt="">
                                     </div>
                                     <div class="list-text">
                                         <div class="name">
@@ -243,83 +196,7 @@
                             </div>
                             <!--Squad Style End -->
                         </div>
-                        {{-- <div id="champion" class="tab-pane fade">
-                            <div class="row">
-                                <div class="champion-inner">
-                                    <div class="col-sm-2 col-xs-3">
-                                        <div class="champion-logo">
-                                            <img src="{{asset('images/logo/rm-best.jpg')}}" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-10 col-xs-9">
-                                        <div class="champion-details">
-                                            <div class="champion-year">
-                                                1
-                                            </div>
-                                            <div class="year-details">
-                                                <h3>THE BEST CLUB OF THE 20TH CENTURY FIFA TROPHY</h3>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="champion-inner">
-                                    <div class="col-sm-2 col-xs-3">
-                                        <div class="champion-logo">
-                                            <img src="{{asset('images/logo/rm-eru.jpg')}}" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-10 col-xs-9">
-                                        <div class="champion-details">
-                                            <div class="champion-year">
-                                                12
-                                            </div>
-                                            <div class="year-details">
-                                                <h3>EUROPEAN CUPS</h3>
-                                                <span>1955-56 1956-57 1957-58 1958-59 1959-60 1965-66 1997-98 1999-00
-                                                    2001-02 2013-14 2015-16 2016-17</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="champion-inner">
-                                    <div class="col-sm-2 col-xs-3">
-                                        <div class="champion-logo">
-                                            <img src="{{asset('images/logo/rm-fifa.jpg')}}" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-10 col-xs-9">
-                                        <div class="champion-details">
-                                            <div class="champion-year">
-                                                6
-                                            </div>
-                                            <div class="year-details">
-                                                <h3>FIFA CLUB WORLD CUPS</h3>
-                                                <span>1960 1998 2002 2014 2016 2017</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="champion-inner">
-                                    <div class="col-sm-2 col-xs-3">
-                                        <div class="champion-logo">
-                                            <img src="{{asset('images/logo/rm-eru2.jpg')}}" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-10 col-xs-9">
-                                        <div class="champion-details">
-                                            <div class="champion-year">
-                                                6
-                                            </div>
-                                            <div class="year-details">
-                                                <h3>EUROPEAN SUPER CUPS</h3>
-                                                <span>2002 2014 2016 2017</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> --}}
-                        <div id="gallery" class="tab-pane fade">
+                        {{-- <div id="gallery" class="tab-pane fade">
                             <div class="gallery-section-page2 gallery-section-area">
                                 <div class="row">
                                     <div class="col-md-3 col-sm-6 col-xs-6">
@@ -396,38 +273,6 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        {{-- <div id="jersy" class="tab-pane fade">
-                            <div class="row">
-                                <div class="champion-inner">
-                                    <div class="col-sm-2 col-xs-3">
-                                        <div class="champion-logo">
-                                            <img src="{{asset('images/logo/rm-hkit.jpg')}}" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-10 col-xs-9">
-                                        <div class="champion-details">
-                                            <div class="year-details">
-                                                <h3>Home Kit(2017-18)</h3>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="champion-inner">
-                                    <div class="col-sm-2 col-xs-3">
-                                        <div class="champion-logo">
-                                            <img src="{{asset('images/logo/rm-akit.jpg')}}" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-10 col-xs-9">
-                                        <div class="champion-details">
-                                            <div class="year-details">
-                                                <h3>Away Kit(2017-18)</h3>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                         </div> --}}
                     </div>
                 </div>
@@ -452,31 +297,31 @@
 
     <!-- all js here -->
     <!-- jquery latest version -->
-    <script src="{{asset('js/jquery.min.js')}}"></script>
+    <script src="{{ asset('js/jquery.min.js') }}"></script>
     <!-- Menu js -->
-    <script src="{{asset('js/rsmenu-main.js')}}"></script>
+    <script src="{{ asset('js/rsmenu-main.js') }}"></script>
     <!-- jquery-ui js -->
-    <script src="{{asset('js/jquery-ui.min.js')}}"></script>
+    <script src="{{ asset('js/jquery-ui.min.js') }}"></script>
     <!-- bootstrap js -->
-    <script src="{{asset('js/bootstrap.min.js')}}"></script>
+    <script src="{{ asset('js/bootstrap.min.js') }}"></script>
     <!-- meanmenu js -->
-    <script src="{{asset('js/jquery.meanmenu.js')}}"></script>
+    <script src="{{ asset('js/jquery.meanmenu.js') }}"></script>
     <!-- wow js -->
-    <script src="{{asset('js/wow.min.js')}}"></script>
+    <script src="{{ asset('js/wow.min.js') }}"></script>
     <!-- Slick js -->
-    <script src="{{asset('js/slick.min.js')}}"></script>
+    <script src="{{ asset('js/slick.min.js') }}"></script>
     <!-- masonry js -->
-    <script src="{{asset('js/masonry.js')}}"></script>
+    <script src="{{ asset('js/masonry.js') }}"></script>
     <!-- magnific-popup js -->
     <!-- owl.carousel js -->
-    <script src="{{asset('js/owl.carousel.min.js')}}"></script>
+    <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
     <!-- magnific-popup js -->
-    <script src="{{asset('js/jquery.magnific-popup.js')}}"></script>
+    <script src="{{ asset('js/jquery.magnific-popup.js') }}"></script>
     <!-- jquery.counterup js -->
-    <script src="{{asset('js/jquery.counterup.min.js')}}"></script>
-    <script src="{{asset('js/waypoints.min.js')}}"></script>
+    <script src="{{ asset('js/jquery.counterup.min.js') }}"></script>
+    <script src="{{ asset('js/waypoints.min.js') }}"></script>
     <!-- main js -->
-    <script src="{{asset('js/main.js')}}"></script>
+    <script src="{{ asset('js/main.js') }}"></script>
 </body>
 
 </html>

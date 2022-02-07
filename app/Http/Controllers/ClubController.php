@@ -9,10 +9,12 @@ class ClubController extends Controller
     public function index(Request $request)
     {
         $clubs = Club::orderBy('created_at', 'desc')->get();
+        $club = Club::where('id', $request->id)->first();
 
         return view('club', [
             'club_id' => $request->id,
-            'clubs' => $clubs
+            'clubs' => $clubs,
+            'club' => $club,
         ]);
     }
 }

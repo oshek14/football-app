@@ -69,6 +69,18 @@
                                     <input type="file" name="logo" class="form-control" required />
                                 </div>
                                 <div class="form-group">
+                                    <label>Manager</label>
+                                    <input type="text" name="manager" class="form-control" required />
+                                </div>
+                                <div class="form-group">
+                                    <label>Location</label>
+                                    <input type="text" name="location" class="form-control" required />
+                                </div>
+                                <div class="form-group">
+                                    <label>Coach</label>
+                                    <input type="text" name="coach" class="form-control" required />
+                                </div>
+                                <div class="form-group">
                                     <label>Description</label>
                                     <textarea name="description" class="textarea"
                                         style="width: 100%; height: 250px"></textarea>
