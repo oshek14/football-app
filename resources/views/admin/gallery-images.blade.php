@@ -40,84 +40,48 @@
             <!-- MAIN CONTENT -->
             <div class="main-content">
                 <div class="container-fluid">
-                    <div class="club-form-wrapper">
-                        <div class="club-form-container">
-                            <h2>Add Club</h2>
-                            @if (session()->get('addClubStatus') === 1)
+                    <div class="gallery-image-form-wrapper">
+                        <div class="gallery-image-form-container">
+                            <h2>Add Gallery Image</h2>
+                            @if (session()->get('addGalleryImageStatus') === 1)
                                 <div class="alert alert-success alert-dismissible" role="alert">
                                     <button type="button" class="close" data-dismiss="alert"
                                         aria-label="Close"><span aria-hidden="true">×</span></button>
-                                    <i class="fa fa-check-circle"></i> Club added succesfully
+                                    <i class="fa fa-check-circle"></i> Gallery image added succesfully
                                 </div>
                             @endif
-                            @if (session()->get('addClubStatus') === 0)
+                            @if (session()->get('addGalleryImageStatus') === 0)
                                 <div class="alert alert-danger alert-dismissible" role="alert">
                                     <button type="button" class="close" data-dismiss="alert"
                                         aria-label="Close"><span aria-hidden="true">×</span></button>
                                     <i class="fa fa-times-circle"></i> Something went wrong
                                 </div>
                             @endif
-                            <form class="image-upload" method="post" action="{{ route('club.store') }}"
+                            <form class="image-upload" method="post" action="{{ route('gallery-image.store') }}"
                                 enctype="multipart/form-data">
                                 @csrf
                                 <div class="form-group">
-                                    <label>Name</label>
-                                    <input type="text" name="name" class="form-control" required />
-                                </div>
-                                <div class="form-group">
-                                    <label>Logo</label>
-                                    <input type="file" name="logo" class="form-control" required />
-                                </div>
-                                <div class="form-group">
-                                    <label>Manager</label>
-                                    <input type="text" name="manager" class="form-control" required />
-                                </div>
-                                <div class="form-group">
-                                    <label>Location</label>
-                                    <input type="text" name="location" class="form-control" required />
-                                </div>
-                                <div class="form-group">
-                                    <label>Coach</label>
-                                    <input type="text" name="coach" class="form-control" required />
-                                </div>
-                                <div class="form-group">
-                                    <label>Description</label>
-                                    <textarea name="description" class="textarea"
-                                        style="width: 100%; height: 250px"></textarea>
+                                    <label>Image</label>
+                                    <input type="file" name="image" class="form-control" required/>
                                 </div>
                                 <div class="form-group text-center">
                                     <button type="submit" class="btn btn-primary btn-block">Save</button>
                                 </div>
                             </form>
                         </div>
-                        <div class="clubs-container">
-                            <h2>Clubs</h2>
-                            <div class="clubs-scroll-container">
-                                @foreach ($clubs as $club)
-                                    <div class="club-list">
+                        <div class="gallery-images-container">
+                            <h2>Gallery Images</h2>
+                            <div class="gallery-images-scroll-container">
+                                @foreach ($galleryImages as $galleryImage)
+                                    <div class="gallery-image-list">
                                         <div class="title-and-image">
-
-                                            @if($club->logo)
-                                                <div class="image"
-                                                    style="background:url({{ asset('app_images/' . $club->logo) }})">
-                                                </div>
-                                            @else
-                                                <div class="image"
-                                                    style="background:url({{ asset('app_images/club-placeholder.png') }})">
-                                                </div>
-                                            @endif
-                                            <div class="title">
-                                                <h5>{{ \Illuminate\Support\Str::limit($club->name, 20, $end='...') }}</h5>
-                                                <p>{!! \Illuminate\Support\Str::limit($club->description, 45, $end='...') !!}</p>
+                                            <div class="image"
+                                                style="background:url({{ asset('app_images/' . $galleryImage->image) }})">
                                             </div>
                                         </div>
-                                        <form action="{{ url('/admin/club/edit/' . $club->id) }}" method="get">
-                                            <input class="btn btn-warning" type="submit" value="Edit" />
-                                            @method('get')
-                                            @csrf
-                                        </form>&nbsp;&nbsp;
-                                        <form action="{{ url('/admin/club/' . $club->id) }}" method="POST">
-                                            <input onclick="return confirm('Are you sure?')" class="btn btn-danger" type="submit" value="Delete" />
+                                        <form action="{{ url('/admin/gallery-image/' . $galleryImage->id) }}" method="POST">
+                                            <input onclick="return confirm('Are you sure?')" class="btn btn-danger"
+                                                type="submit" value="Delete" />
                                             @method('delete')
                                             @csrf
                                         </form>&nbsp;&nbsp;

@@ -16,7 +16,7 @@ class CreatePlayersTable extends Migration
         Schema::create('players', function (Blueprint $table) {
             $table->id();
             $table->text('name');
-            $table->string('image');
+            $table->string('image')->nullable();
             $table->string('designation');
             $table->foreignId('club_id');
             $table->timestamps();

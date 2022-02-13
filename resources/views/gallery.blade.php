@@ -9,33 +9,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <!-- Place favicon.ico in the root directory -->
-    <link rel="shortcut icon" type="image/x-icon" href="{{asset('images/fav.png')}}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('images/fav.png') }}">
     <!-- bootstrap v3.3.6 css -->
-    <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
     <!-- font-awesome css -->
-    <link rel="stylesheet" href="{{asset('css/font-awesome.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/font-awesome.min.css') }}">
     <!-- animate css -->
-    <link rel="stylesheet" href="{{asset('css/animate.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/animate.css') }}">
     <!-- Main Menu css -->
-    <link rel="stylesheet" href="{{asset('css/rsmenu-main.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/rsmenu-main.css') }}">
     <!-- rsmenu transitions css -->
-    <link rel="stylesheet" href="{{asset('css/rsmenu-transitions.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/rsmenu-transitions.css') }}">
     <!-- hover-min css -->
-    <link rel="stylesheet" href="{{asset('css/hover-min.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/hover-min.css') }}">
     <!-- magnific-popup css -->
-    <link rel="stylesheet" href="{{asset('css/magnific-popup.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/magnific-popup.css') }}">
     <!-- owl.carousel css -->
-    <link rel="stylesheet" href="{{asset('css/owl.carousel.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/owl.carousel.css') }}">
     <!-- Slick css -->
-    <link rel="stylesheet" href="{{asset('css/slick.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/slick.css') }}">
     <!-- Slick Theme css -->
-    <link rel="stylesheet" href="{{asset('css/slick-theme.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/slick-theme.css') }}">
     <!-- style css -->
-    <link rel="stylesheet" href="{{asset('css/style.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <!-- responsive css -->
-    <link rel="stylesheet" href="{{asset('css/responsive.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/responsive.css') }}">
     <!-- modernizr js -->
-    <script src="{{asset('js/modernizr-2.8.3.min.js')}}"></script>
+    <script src="{{ asset('js/modernizr-2.8.3.min.js') }}"></script>
 </head>
 
 <body class="home-two">
@@ -54,7 +54,7 @@
 
     <!-- Breadcrumbs Section Start -->
     <div class="rs-breadcrumbs sec-color">
-        <img src="{{asset('images/breadcrumbs/gallery3.jpg')}}" alt="Breadcrubs" />
+        <img src="{{ asset('images/breadcrumbs/gallery3.jpg') }}" alt="Breadcrubs" />
         <div class="breadcrumbs-inner">
             <div class="container">
                 <div class="row">
@@ -78,103 +78,25 @@
         <div class="gallery-section-area">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-3 col-sm-6 col-xs-6">
-                        <div class="single-gallery">
-                            <img src="{{asset('images/gallery3/1.jpg')}}" alt="">
-                            <div class="popup-icon">
-                                <a class="image-popup" href="images/gallery3/1.jpg')}}"><i class="fa fa-arrows-alt"></i></a>
+                    @foreach ($galleryImages as $galleryImage)
+                        <div class="col-md-3 col-sm-6 col-xs-6">
+                            <div class="single-gallery">
+                                <div class="images">
+                                    <div class="gallery-image-place"
+                                        style="background:url({{ asset('app_images/' . $galleryImage->image) }})">
+                                    </div>
+                                </div>
+                                <div class="popup-icon">
+                                    <a class="image-popup"
+                                        href="{{ asset('app_images/' . $galleryImage->image) }}"><i
+                                            class="fa fa-arrows-alt"></i></a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6 col-xs-6">
-                        <div class="single-gallery">
-                            <img src="{{asset('images/gallery3/2.jpg')}}" alt="">
-                            <div class="popup-icon">
-                                <a class="image-popup" href="images/gallery3/2.jpg')}}"><i class="fa fa-arrows-alt"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6 col-xs-6">
-                        <div class="single-gallery">
-                            <img src="{{asset('images/gallery3/3.jpg')}}" alt="">
-                            <div class="popup-icon">
-                                <a class="image-popup" href="images/gallery3/3.jpg')}}"><i class="fa fa-arrows-alt"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6 col-xs-6">
-                        <div class="single-gallery">
-                            <img src="{{asset('images/gallery3/4.jpg')}}" alt="">
-                            <div class="popup-icon">
-                                <a class="image-popup" href="images/gallery3/4.jpg')}}"><i class="fa fa-arrows-alt"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6 col-xs-6">
-                        <div class="single-gallery">
-                            <img src="{{asset('images/gallery3/5.jpg')}}" alt="">
-                            <div class="popup-icon">
-                                <a class="image-popup" href="images/gallery3/5.jpg')}}"><i class="fa fa-arrows-alt"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6 col-xs-6">
-                        <div class="single-gallery">
-                            <img src="{{asset('images/gallery3/6.jpg')}}" alt="">
-                            <div class="popup-icon">
-                                <a class="image-popup" href="images/gallery3/6.jpg')}}"><i class="fa fa-arrows-alt"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6 col-xs-6">
-                        <div class="single-gallery">
-                            <img src="{{asset('images/gallery3/7.jpg')}}" alt="">
-                            <div class="popup-icon">
-                                <a class="image-popup" href="images/gallery3/7.jpg')}}"><i class="fa fa-arrows-alt"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6 col-xs-6">
-                        <div class="single-gallery">
-                            <img src="{{asset('images/gallery3/8.jpg')}}" alt="">
-                            <div class="popup-icon">
-                                <a class="image-popup" href="images/gallery3/8.jpg')}}"><i class="fa fa-arrows-alt"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6 col-xs-6">
-                        <div class="single-gallery">
-                            <img src="{{asset('images/gallery3/9.jpg')}}" alt="">
-                            <div class="popup-icon">
-                                <a class="image-popup" href="images/gallery3/9.jpg')}}"><i class="fa fa-arrows-alt"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6 col-xs-6">
-                        <div class="single-gallery">
-                            <img src="{{asset('images/gallery3/10.jpg')}}" alt="">
-                            <div class="popup-icon">
-                                <a class="image-popup" href="images/gallery3/10.jpg')}}"><i
-                                        class="fa fa-arrows-alt"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6 col-xs-6">
-                        <div class="single-gallery">
-                            <img src="{{asset('images/gallery3/11.jpg')}}" alt="">
-                            <div class="popup-icon">
-                                <a class="image-popup" href="images/gallery3/11.jpg')}}"><i
-                                        class="fa fa-arrows-alt"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6 col-xs-6">
-                        <div class="single-gallery">
-                            <img src="{{asset('images/gallery3/12.jpg')}}" alt="">
-                            <div class="popup-icon">
-                                <a class="image-popup" href="images/gallery3/12.jpg')}}"><i
-                                        class="fa fa-arrows-alt"></i></a>
-                            </div>
+                    @endforeach
+                    <div class="row">
+                        <div class="col-sm-12 news-pagination-numbers">
+                            {{ $galleryImages->links('pagination::bootstrap-4') }}
                         </div>
                     </div>
                 </div>
@@ -196,23 +118,23 @@
                 data-md-device-dots="false">
                 <div class="item">
                     <div class="single-logo">
-                        <a href="#"><img src="{{asset('images/logo/1.png')}}" alt=""></a>
+                        <a href="#"><img src="{{ asset('images/logo/1.png') }}" alt=""></a>
                     </div>
                 </div>
                 <div class="item">
                     <div class="single-logo">
-                        <a href="#"><img src="{{asset('images/logo/2.png')}}" alt=""></a>
+                        <a href="#"><img src="{{ asset('images/logo/2.png') }}" alt=""></a>
                     </div>
                 </div>
 
                 <div class="item">
                     <div class="single-logo">
-                        <a href="#"><img src="{{asset('images/logo/3.png')}}" alt=""></a>
+                        <a href="#"><img src="{{ asset('images/logo/3.png') }}" alt=""></a>
                     </div>
                 </div>
                 <div class="item">
                     <div class="single-logo">
-                        <a href="#"><img src="{{asset('images/logo/4.png')}}" alt=""></a>
+                        <a href="#"><img src="{{ asset('images/logo/4.png') }}" alt=""></a>
                     </div>
                 </div>
             </div>
@@ -235,31 +157,31 @@
 
     <!-- all js here -->
     <!-- jquery latest version -->
-    <script src="{{asset('js/jquery.min.js')}}"></script>
+    <script src="{{ asset('js/jquery.min.js') }}"></script>
     <!-- Menu js -->
-    <script src="{{asset('js/rsmenu-main.js')}}"></script>
+    <script src="{{ asset('js/rsmenu-main.js') }}"></script>
     <!-- jquery-ui js -->
-    <script src="{{asset('js/jquery-ui.min.js')}}"></script>
+    <script src="{{ asset('js/jquery-ui.min.js') }}"></script>
     <!-- bootstrap js -->
-    <script src="{{asset('js/bootstrap.min.js')}}"></script>
+    <script src="{{ asset('js/bootstrap.min.js') }}"></script>
     <!-- meanmenu js -->
-    <script src="{{asset('js/jquery.meanmenu.js')}}"></script>
+    <script src="{{ asset('js/jquery.meanmenu.js') }}"></script>
     <!-- wow js -->
-    <script src="{{asset('js/wow.min.js')}}"></script>
+    <script src="{{ asset('js/wow.min.js') }}"></script>
     <!-- Slick js -->
-    <script src="{{asset('js/slick.min.js')}}"></script>
+    <script src="{{ asset('js/slick.min.js') }}"></script>
     <!-- masonry js -->
-    <script src="{{asset('js/masonry.js')}}"></script>
+    <script src="{{ asset('js/masonry.js') }}"></script>
     <!-- magnific-popup js -->
     <!-- owl.carousel js -->
-    <script src="{{asset('js/owl.carousel.min.js')}}"></script>
+    <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
     <!-- magnific-popup js -->
-    <script src="{{asset('js/jquery.magnific-popup.js')}}"></script>
+    <script src="{{ asset('js/jquery.magnific-popup.js') }}"></script>
     <!-- jquery.counterup js -->
-    <script src="{{asset('js/jquery.counterup.min.js')}}"></script>
-    <script src="{{asset('js/waypoints.min.js')}}"></script>
+    <script src="{{ asset('js/jquery.counterup.min.js') }}"></script>
+    <script src="{{ asset('js/waypoints.min.js') }}"></script>
     <!-- main js -->
-    <script src="{{asset('js/main.js')}}"></script>
+    <script src="{{ asset('js/main.js') }}"></script>
 </body>
 
 </html>

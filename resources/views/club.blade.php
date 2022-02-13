@@ -54,12 +54,12 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 text-center">
-                        <h1 class="page-title">{{$club->name}}</h1>
+                        <h1 class="page-title">{{ $club->name }}</h1>
                         <ul>
                             <li>
                                 <a class="active" href="index.html">Home</a>
                             </li>
-                            <li>{{$club->name}}</li>
+                            <li>{{ $club->name }}</li>
                         </ul>
                     </div>
                 </div>
@@ -76,11 +76,18 @@
                 <div class="col-md-2 col-sm-3">
                     <div class="club-sidebar-top">
                         <div class="club-logo">
-                            <div class="image club-image-place"
-                                style="background:url({{ asset('app_images/' . $club->logo) }})">
-                            </div>
+                            @if ($club->logo)
+                                <div class="image club-image-place"
+                                    style="background:url({{ asset('app_images/' . $club->logo) }})">
+                                </div>
+                            @else
+                                <div class="image club-image-place"
+                                    style="background:url({{ asset('app_images/club-placeholder.png') }})">
+                                </div>
+                            @endif
+
                             <div class="club-name" style="text-align: center">
-                                <h2 class="title-bg">{{$club->name}}</h2>
+                                <h2 class="title-bg">{{ $club->name }}</h2>
                             </div>
                         </div>
                     </div>
@@ -89,7 +96,7 @@
                     <div class="row">
                         <div class="rs-count" style="padding: 15px">
                             <h3 class="title-bg">Club History</h3>
-                            <p>{{$club->description}}</p>
+                            <p>{{ $club->description }}</p>
                         </div>
                     </div>
                     <div class="club-sidebar">
@@ -97,15 +104,15 @@
                             <ul class="spsoccer-team-info-list spsoccer-ul-list" style="text-align: left">
                                 <li>
                                     <strong>Manager</strong>
-                                    <span>{{$club->manager}}</span>
+                                    <span>{{ $club->manager }}</span>
                                 </li>
                                 <li>
                                     <strong>Coach </strong>
-                                    <span>{{$club->coach}}</span>
+                                    <span>{{ $club->coach }}</span>
                                 </li>
                                 <li>
                                     <strong>Location</strong>
-                                    <span>{{$club->location}}</span>
+                                    <span>{{ $club->location }}</span>
                                 </li>
                             </ul>
                         </div>
@@ -124,75 +131,29 @@
                         <div id="squad-list" class="tab-pane fade in active">
                             <!--Squad Style Start -->
                             <div class="squad-list">
-                                <div class="list-item">
-                                    <div class="image">
-                                        <h2>Image</h2>
-                                    </div>
-                                    <div class="list-text">
-                                        <div class="name">
-                                            <h2>Name</h2>
+                                @foreach ($club->players as $player)
+                                    <div class="list-item">
+                                        <div class="image player-image-container">
+                                            @if ($player->image)
+                                                <div class="image player-image-place"
+                                                    style="background:url({{ asset('app_images/' . $player->image) }})">
+                                                </div>
+                                            @else
+                                                <div class="image player-image-place"
+                                                    style="background:url({{ asset('app_images/player-placeholder.png') }})">
+                                                </div>
+                                            @endif
                                         </div>
-                                        <div class="designation">
-                                            <h2>Designation</h2>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="list-item">
-                                    <div class="image">
-                                        <img src="{{ asset('images/team/5.jpg') }}" alt="">
-                                    </div>
-                                    <div class="list-text">
-                                        <div class="name">
-                                            <h4> <a href="team-single.html">Peter Thugs<i
-                                                        class="fa fa-external-link-square"></i></a></h4>
-                                        </div>
-                                        <div class="designation">
-                                            Goal Kepper
+                                        <div class="list-text">
+                                            <div class="name">
+                                                <h4>{{ $player->name }}</h4>
+                                            </div>
+                                            <div class="designation">
+                                                {!! $player->designation !!}
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="list-item">
-                                    <div class="image">
-                                        <img src="{{ asset('images/team/6.jpg') }}" alt="">
-                                    </div>
-                                    <div class="list-text">
-                                        <div class="name">
-                                            <h4> <a href="team-single.html">Chris Morshal<i
-                                                        class="fa fa-external-link-square"></i></a></h4>
-                                        </div>
-                                        <div class="designation">
-                                            Midfilder
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="list-item">
-                                    <div class="image">
-                                        <img src="{{ asset('images/team/7.jpg') }}" alt="">
-                                    </div>
-                                    <div class="list-text">
-                                        <div class="name">
-                                            <h4> <a href="team-single.html">John Sharp<i
-                                                        class="fa fa-external-link-square"></i></a></h4>
-                                        </div>
-                                        <div class="designation">
-                                            Goal Kepper
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="list-item">
-                                    <div class="image">
-                                        <img src="{{ asset('images/team/8.jpg') }}" alt="">
-                                    </div>
-                                    <div class="list-text">
-                                        <div class="name">
-                                            <h4> <a href="team-single.html">Mike Flame<i
-                                                        class="fa fa-external-link-square"></i></a></h4>
-                                        </div>
-                                        <div class="designation">
-                                            Midfilder
-                                        </div>
-                                    </div>
-                                </div>
+                                @endforeach
                             </div>
                             <!--Squad Style End -->
                         </div>

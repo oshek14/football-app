@@ -78,7 +78,7 @@
                                 <br>
                                 <div class="form-group">
                                     <label>Image</label>
-                                    <input type="file" name="image" class="form-control" required value="{{$player->image}}" />
+                                    <input type="file" name="image" class="form-control" value="{{$player->image}}" />
                                 </div>
                                 <div class="form-group">
                                     <label>Designation</label>

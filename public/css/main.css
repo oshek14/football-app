@@ -2651,14 +2651,27 @@ ul.activity-timeline>li:last-child:after {
 
 .blogpost-form-wrapper,
 .club-form-wrapper,
+.gallery-image-form-wrapper,
 .player-form-wrapper
  {
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
 
+@media screen and (max-width: 1320px) {
+    .blogpost-form-wrapper,
+    .club-form-wrapper,
+    .gallery-image-form-wrapper,
+    .player-form-wrapper
+     {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+
 .blogpost-form-container,
 .player-form-container,
+.gallery-image-form-container,
 .club-form-container
  {
     padding: 0 20px;
@@ -2666,6 +2679,7 @@ ul.activity-timeline>li:last-child:after {
 
 .blogpost-blogs-container,
 .players-container,
+.gallery-images-container,
 .clubs-container {
     padding: 0 20px;
 }

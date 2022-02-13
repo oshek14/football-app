@@ -27,18 +27,19 @@ class ClubController extends Controller
      */
     public function store(Request $request)
     {
-        $clubLogo = $request->file('logo');
-        $extension = $clubLogo->getClientOriginalExtension();
-        $fileName = $clubLogo->getFilename() . '.' . $extension;
-        Storage::disk('public')->put($fileName,  File::get($clubLogo));
         $club = new Club;
+        if($request->logo) {
+            $clubLogo = $request->file('logo');
+            $extension = $clubLogo->getClientOriginalExtension();
+            $fileName = $clubLogo->getFilename() . '.' . $extension;
+            Storage::disk('public')->put($fileName,  File::get($clubLogo));
+            $club->logo = $fileName;
+        }
         $club->name = $request->name;
         $club->description = $request->description;
         $club->manager = $request->manager;
         $club->coach = $request->coach;
         $club->location = $request->location;
-        $club->logo = $request->logo;
-        $club->logo = $fileName;
         if ($club->save()) {
             return redirect()->back()->with(['addClubStatus' => 1]);
         } else {
@@ -54,23 +55,23 @@ class ClubController extends Controller
      */
     public function update(Request $request)
     {
-        Log::info($request);
         $club = Club::where('id', $request->id)->first();
-        $file_path = public_path() . '/app_images' . '/' . $club->logo;
-        unlink($file_path);
-
-        $clubLogo = $request->file('logo');
-        $extension = $clubLogo->getClientOriginalExtension();
-        $fileName = $clubLogo->getFilename() . '.' . $extension;
-        Storage::disk('public')->put($fileName,  File::get($clubLogo));
-
+        if($request->image) {
+            $file_path = public_path() . '/app_images' . '/' . $club->logo;
+            if(file_exists($file_path) && !is_dir($file_path)) {
+                unlink($file_path);
+            }
+            $clubLogo = $request->file('logo');
+            $extension = $clubLogo->getClientOriginalExtension();
+            $fileName = $clubLogo->getFilename() . '.' . $extension;
+            Storage::disk('public')->put($fileName,  File::get($clubLogo));
+            $club->logo = $fileName;
+        }
         $club->name = $request->name;
         $club->description = $request->description;
         $club->manager = $request->manager;
         $club->coach = $request->coach;
         $club->location = $request->location;
-        $club->logo = $request->logo;
-        $club->logo = $fileName;
         if ($club->save()) {
             return redirect()->back()->with(['updateClubStatus' => 1]);
         } else {

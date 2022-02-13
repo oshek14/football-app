@@ -30,16 +30,17 @@ class PlayerController extends Controller
      */
     public function store(Request $request)
     {
-        $playerImage = $request->file('image');
-        $extension = $playerImage->getClientOriginalExtension();
-        $fileName = $playerImage->getFilename() . '.' . $extension;
-        Storage::disk('public')->put($fileName,  File::get($playerImage));
         $player = new Player;
+        if($request->image) {
+            $playerImage = $request->file('image');
+            $extension = $playerImage->getClientOriginalExtension();
+            $fileName = $playerImage->getFilename() . '.' . $extension;
+            Storage::disk('public')->put($fileName,  File::get($playerImage));
+            $player->image = $fileName;
+        }
         $player->name = $request->name;
         $player->designation = $request->designation;
         $player->club_id = $request->club_id;
-        $player->image = $request->image;
-        $player->image = $fileName;
         if ($player->save()) {
             return redirect()->back()->with(['addPlayerStatus' => 1]);
         } else {
@@ -55,22 +56,22 @@ class PlayerController extends Controller
      */
     public function update(Request $request)
     {
-        Log::info($request);
         $player = Player::where('id', $request->id)->first();
-        $file_path = public_path() . '/app_images' . '/' . $player->image;
-        if(file_exists($file_path) && !is_dir($file_path)) {
-            unlink($file_path);
+        if($request->image) {
+            $file_path = public_path() . '/app_images' . '/' . $player->image;
+            if(file_exists($file_path) && !is_dir($file_path)) {
+                unlink($file_path);
+            }
+            $playerImage = $request->file('image');
+            $extension = $playerImage->getClientOriginalExtension();
+            $fileName = $playerImage->getFilename() . '.' . $extension;
+            Storage::disk('public')->put($fileName,  File::get($playerImage));
+            $player->image = $fileName;
         }
-        $playerImage = $request->file('image');
-        $extension = $playerImage->getClientOriginalExtension();
-        $fileName = $playerImage->getFilename() . '.' . $extension;
-        Storage::disk('public')->put($fileName,  File::get($playerImage));
 
         $player->name = $request->name;
         $player->designation = $request->designation;
         $player->club_id = $request->club_id;
-        $player->image = $request->image;
-        $player->image = $fileName;
         if ($player->save()) {
             return redirect()->back()->with(['updatePlayerStatus' => 1]);
         } else {
@@ -92,7 +93,9 @@ class PlayerController extends Controller
     {
         $player = Player::where('id', $id)->first();
         $file_path = public_path() . '/app_images' . '/' . $player->image;
-        unlink($file_path);
+        if(file_exists($file_path) && !is_dir($file_path)) {
+            unlink($file_path);
+        }
         $player->delete();
         return redirect()->route('players.index');
     }

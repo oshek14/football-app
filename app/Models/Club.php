@@ -10,7 +10,7 @@ class Club extends Model
     use HasFactory;
     protected $fillable = ['name', 'logo', 'description', 'manager', 'coach', 'location'];
 
-    public function layers()
+    public function players()
     {
         return $this->hasMany(Player::class);
     }

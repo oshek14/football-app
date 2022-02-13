@@ -73,7 +73,7 @@
                                 <br>
                                 <div class="form-group">
                                     <label>Image</label>
-                                    <input type="file" name="image" class="form-control" required />
+                                    <input type="file" name="image" class="form-control" />
                                 </div>
                                 <div class="form-group">
                                     <label>Designation</label>
@@ -91,9 +91,15 @@
                                 @foreach ($players as $player)
                                     <div class="player-list">
                                         <div class="title-and-image">
+                                            @if($player->image)
                                             <div class="image"
                                                 style="background:url({{ asset('app_images/' . $player->image) }})">
                                             </div>
+                                            @else
+                                            <div class="image"
+                                                style="background:url({{ asset('app_images/player-placeholder.png') }})">
+                                            </div>
+                                            @endif
                                             <div class="title">
                                                 <h5>{{ \Illuminate\Support\Str::limit($player->name, 20, $end = '...') }}
                                                 </h5>

@@ -60,4 +60,8 @@ Route::group(['prefix' => 'admin'], function () {
     Route::put('/player/update','App\Http\Controllers\Admin\PlayerController@update')->name('player.update')->middleware('auth');
     Route::get('/player/edit/{id}','App\Http\Controllers\Admin\PlayerController@show')->name('players.edit')->middleware('auth');
     Route::delete('/player/{id}','App\Http\Controllers\Admin\PlayerController@destroy')->name('player.destroy')->middleware('auth');
+
+    Route::get('/gallery-images','App\Http\Controllers\Admin\GalleryController@index')->name('gallery-images.index')->middleware('auth');
+    Route::post('/gallery-image','App\Http\Controllers\Admin\GalleryController@store')->name('gallery-image.store')->middleware('auth');
+    Route::delete('/gallery-image/{id}','App\Http\Controllers\Admin\GalleryController@destroy')->name('gallery-image.destroy')->middleware('auth');
 });

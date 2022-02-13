@@ -33,5 +33,29 @@ class PlayersSeeder extends Seeder
             'designation' => 'Third player designation',
             'club_id' => 3,
         ]);
+        DB::table('players')->insert([
+            'name' => 'Fourth player',
+            'image' => '',
+            'designation' => 'Fourth player designation',
+            'club_id' => 3,
+        ]);
+        DB::table('players')->insert([
+            'name' => 'Fifth player',
+            'image' => '',
+            'designation' => 'Fifth player designation',
+            'club_id' => 3,
+        ]);
+        DB::table('players')->insert([
+            'name' => 'Sixth player',
+            'image' => '',
+            'designation' => 'Sixth player designation',
+            'club_id' => 3,
+        ]);
+        DB::table('players')->insert([
+            'name' => 'Seventh player',
+            'image' => '',
+            'designation' => 'Seventh player designation',
+            'club_id' => 3,
+        ]);
     }
 }

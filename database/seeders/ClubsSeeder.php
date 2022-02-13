@@ -17,7 +17,7 @@ class ClubsSeeder extends Seeder
     {
         DB::table('clubs')->insert([
             'name' => 'First Club',
-            'logo' => 'club1.png',
+            'logo' => '',
             'description' => 'First club description',
             'manager' => 'Manager name',
             'coach' => 'Coach name',
@@ -25,7 +25,7 @@ class ClubsSeeder extends Seeder
         ]);
         DB::table('clubs')->insert([
             'name' => 'Second Club',
-            'logo' => 'club2.png',
+            'logo' => '',
             'description' => 'Second club description',
             'manager' => 'Manager name',
             'coach' => 'Coach name',
@@ -33,7 +33,7 @@ class ClubsSeeder extends Seeder
         ]);
         DB::table('clubs')->insert([
             'name' => 'Third Club',
-            'logo' => 'club3.png',
+            'logo' => '',
             'description' => 'Third club description',
             'manager' => 'Manager name',
             'coach' => 'Coach name',
